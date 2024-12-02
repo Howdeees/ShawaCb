@@ -169,15 +169,15 @@ body {
 }
 
 #section1 {
-  background-image: url('path-to-image1.jpg'); /* Замените на ваш путь */
+  background-image: url('images/FON1.jpeg'); /* Замените на ваш путь */
 }
 
 #section2 {
-  background-image: url('path-to-image2.jpg'); /* Замените на ваш путь */
+  background-image: url('images/FON2.jpeg'); /* Замените на ваш путь */
 }
 
 #section3 {
-  background-image: url('path-to-image3.jpg'); /* Замените на ваш путь */
+  background-image: url('images/FON3.jpg'); /* Замените на ваш путь */
 }
 
 /* Меню */
