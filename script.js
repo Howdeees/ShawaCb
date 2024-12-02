@@ -152,3 +152,80 @@ window.onclick = function (event) {
     modal.style.display = 'none';
   }
 };
+// Данные меню
+const items = {
+  Шаурма: [
+      { name: 'Шаурма классическая', image: 'classic-shaurma.jpg' },
+      { name: 'Шаурма с говядиной', image: 'beef-shaurma.jpg' },
+      { name: 'Шаурма с курицей и сыром', image: 'chicken-cheese-shaurma.jpg' },
+      { name: 'Вегетарианская шаурма', image: 'veggie-shaurma.jpg' }
+  ],
+  Бургеры: [
+      { name: 'Чизбургер', image: 'cheeseburger.jpg' },
+      { name: 'Сырный бургер', image: 'cheese-burger.jpg' },
+      { name: 'Двойной чизбургер', image: 'double-cheeseburger.jpg' }
+  ],
+  Фритюр: [
+      { name: 'Картофель фри', image: 'fries.jpg' },
+      { name: 'Стрипсы', image: 'strips.jpg' }
+  ]
+};
+
+// Выбранные товары
+let selectedItems = {};
+
+// Открытие модального окна
+function openModal(itemName) {
+  const modal = document.getElementById('orderModal');
+  const header = document.getElementById('modal-header');
+  const iconContainer = document.getElementById('icon-container');
+  header.innerText = `Выберите ${itemName}`;
+  iconContainer.innerHTML = '';
+
+  if (items[itemName]) {
+      items[itemName].forEach(item => {
+          const iconDiv = document.createElement('div');
+          iconDiv.className = 'icon';
+          iconDiv.onclick = () => selectItem(item.name);
+
+          const img = document.createElement('img');
+          img.src = item.image;
+          img.alt = item.name;
+
+          const itemLabel = document.createElement('p');
+          itemLabel.innerText = item.name;
+
+          iconDiv.appendChild(img);
+          iconDiv.appendChild(itemLabel);
+          iconContainer.appendChild(iconDiv);
+      });
+  }
+
+  modal.style.display = 'block';
+}
+
+// Закрытие модального окна
+function closeModal() {
+  document.getElementById('orderModal').style.display = 'none';
+}
+
+// Подтверждение заказа
+function confirmOrder() {
+  if (Object.keys(selectedItems).length === 0) {
+      alert('Пожалуйста, выберите хотя бы одно блюдо.');
+      return;
+  }
+
+  let summary = 'Ваш заказ:\n';
+  for (const [key, value] of Object.entries(selectedItems)) {
+      summary += `${key}: ${value} шт.\n`;
+  }
+  alert(summary + 'Спасибо за заказ!');
+  closeModal();
+}
+
+// Выбор элемента
+function selectItem(itemName) {
+  selectedItems[itemName] = (selectedItems[itemName] || 0) + 1;
+  console.log(selectedItems);
+}
