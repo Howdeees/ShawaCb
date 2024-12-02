@@ -1,182 +1,184 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заказ еды</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Заказ еды</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Меню ресторана</h1>
 
-<div class="container">
-    <h1>Меню ресторана</h1>
+			<div class="menu-item" onclick="openModal('Шаурма')">
+				<h2>Шаурма</h2>
+				<p>Традиционная шаурма с курицей, свежими овощами и соусом.</p>
+			</div>
 
-    <div class="menu-item" onclick="openModal('Шаурма')">
-        <h2>Шаурма</h2>
-        <p>Традиционная шаурма с курицей, свежими овощами и соусом.</p>
-    </div>
+			<div class="menu-item" onclick="openModal('Бургеры')">
+				<h2>Бургеры</h2>
+				<p>Сочные бургеры с говяжьей котлетой, сыром и свежими овощами.</p>
+			</div>
 
-    <div class="menu-item" onclick="openModal('Бургеры')">
-        <h2>Бургеры</h2>
-        <p>Сочные бургеры с говяжьей котлетой, сыром и свежими овощами.</p>
-    </div>
+			<div class="menu-item" onclick="openModal('Фритюр')">
+				<h2>Фритюр</h2>
+				<p>Ассорти из картофеля фри и луковых колец, обжаренных во фритюре.</p>
+			</div>
+		</div>
 
-    <div class="menu-item" onclick="openModal('Фритюр')">
-        <h2>Фритюр</h2>
-        <p>Ассорти из картофеля фри и луковых колец, обжаренных во фритюре.</p>
-    </div>
-</div>
+		<footer>© 2024 Заказ еды</footer>
 
-<footer>
-    © 2024 Заказ еды
-</footer>
+		<!-- Модальное окно -->
+		<div id="orderModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<div id="modal-header" class="modal-header"></div>
+				<div id="modal-body">
+					<div class="icon-container" id="icon-container">
+						<!-- Иконки для выбранного пункта меню будут вставляться сюда -->
+					</div>
+				</div>
 
-<!-- Модальное окно -->
-<div id="orderModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div id="modal-header" class="modal-header"></div>
-        <div id="modal-body">
-            <div class="icon-container" id="icon-container">
-                <!-- Иконки для выбранного пункта меню будут вставляться сюда -->
-            </div>
-        </div>
-        
-        <div class="selected-items" id="selected-items">
-            <!-- Выбранные товары будут появляться здесь -->
-        </div>
-        <button style="margin-top: 10px;" onclick="confirmOrder()">Подтвердить заказ</button>
-    </div>
-</div>
+				<div class="selected-items" id="selected-items">
+					<!-- Выбранные товары будут появляться здесь -->
+				</div>
+				<button style="margin-top: 10px" onclick="confirmOrder()">
+					Подтвердить заказ
+				</button>
+			</div>
+		</div>
 
-<script>
-    const items = {
-        'Шаурма': [
-            { name: 'Шаурма классическая', image: 'classic-shaurma.jpg' },
-            { name: 'Шаурма с говядиной', image: 'beef-shaurma.jpg' },
-            { name: 'Шаурма с курицей и сыром', image: 'chicken-cheese-shaurma.jpg' },
-            { name: 'Вегетарианская шаурма', image: 'veggie-shaurma.jpg' }
-        ],
-        'Бургеры': [
-            { name: 'Чизбургер', image: 'cheeseburger.jpg' },
-            { name: 'Сырный бургер', image: 'cheese-burger.jpg' },
-            { name: 'Двойной чизбургер', image: 'double-cheeseburger.jpg' }
-        ],
-        'Фритюр': [
-            { name: 'Картофель фри', image: 'fries.jpg' },
-            { name: 'Стрипсы', image: 'strips.jpg' }
-        ]
-    };
+		<script>
+			const items = {
+				Шаурма: [
+					{ name: 'Шаурма классическая', image: 'classic-shaurma.jpg' },
+					{ name: 'Шаурма с говядиной', image: 'beef-shaurma.jpg' },
+					{
+						name: 'Шаурма с курицей и сыром',
+						image: 'chicken-cheese-shaurma.jpg',
+					},
+					{ name: 'Вегетарианская шаурма', image: 'veggie-shaurma.jpg' },
+				],
+				Бургеры: [
+					{ name: 'Чизбургер', image: 'cheeseburger.jpg' },
+					{ name: 'Сырный бургер', image: 'cheese-burger.jpg' },
+					{ name: 'Двойной чизбургер', image: 'double-cheeseburger.jpg' },
+				],
+				Фритюр: [
+					{ name: 'Картофель фри', image: 'fries.jpg' },
+					{ name: 'Стрипсы', image: 'strips.jpg' },
+				],
+			}
 
-    let selectedItems = {}; // Хранение выбранных товаров и их количества
+			let selectedItems = {} // Хранение выбранных товаров и их количества
 
-    // Открытие попапа с иконками выбора
-    function openModal(itemName) {
-        document.getElementById('modal-header').innerText = 'Выберите ' + itemName;
+			// Открытие попапа с иконками выбора
+			function openModal(itemName) {
+				document.getElementById('modal-header').innerText =
+					'Выберите ' + itemName
 
-        const iconContainer = document.getElementById('icon-container');
-        iconContainer.innerHTML = ''; // Очищаем контейнер с иконками
+				const iconContainer = document.getElementById('icon-container')
+				iconContainer.innerHTML = '' // Очищаем контейнер с иконками
 
-        if (items[itemName]) {
-            items[itemName].forEach(item => {
-                const iconDiv = document.createElement('div');
-                iconDiv.className = 'icon';
-                iconDiv.onclick = () => selectItem(item.name);
+				if (items[itemName]) {
+					items[itemName].forEach(item => {
+						const iconDiv = document.createElement('div')
+						iconDiv.className = 'icon'
+						iconDiv.onclick = () => selectItem(item.name)
 
-                const img = document.createElement('img');
-                img.src = item.image; // Здесь будут изображения для каждого варианта
-                img.alt = item.name;
+						const img = document.createElement('img')
+						img.src = item.image // Здесь будут изображения для каждого варианта
+						img.alt = item.name
 
-                const itemNameLabel = document.createElement('p');
-                itemNameLabel.innerText = item.name;
+						const itemNameLabel = document.createElement('p')
+						itemNameLabel.innerText = item.name
 
-                iconDiv.appendChild(img);
-                iconDiv.appendChild(itemNameLabel);
-                iconContainer.appendChild(iconDiv);
-            });
-        }
+						iconDiv.appendChild(img)
+						iconDiv.appendChild(itemNameLabel)
+						iconContainer.appendChild(iconDiv)
+					})
+				}
 
-        document.getElementById('orderModal').style.display = 'block';
-    }
+				document.getElementById('orderModal').style.display = 'block'
+			}
 
-    // Выбор пункта меню и добавление его в список выбранных товаров
-    function selectItem(itemName) {
-        if (selectedItems[itemName]) {
-            selectedItems[itemName] += 1; // Увеличиваем количество выбранного товара
-        } else {
-            selectedItems[itemName] = 1; // Добавляем товар в список
-        }
-        updateSelectedItems();
-    }
+			// Выбор пункта меню и добавление его в список выбранных товаров
+			function selectItem(itemName) {
+				if (selectedItems[itemName]) {
+					selectedItems[itemName] += 1 // Увеличиваем количество выбранного товара
+				} else {
+					selectedItems[itemName] = 1 // Добавляем товар в список
+				}
+				updateSelectedItems()
+			}
 
-    // Обновление списка выбранных товаров
-    function updateSelectedItems() {
-        const selectedItemsContainer = document.getElementById('selected-items');
-        selectedItemsContainer.innerHTML = ''; // Очищаем список перед обновлением
+			// Обновление списка выбранных товаров
+			function updateSelectedItems() {
+				const selectedItemsContainer = document.getElementById('selected-items')
+				selectedItemsContainer.innerHTML = '' // Очищаем список перед обновлением
 
-        Object.keys(selectedItems).forEach(itemName => {
-            const itemDiv = document.createElement('div');
-            itemDiv.className = 'selected-item';
+				Object.keys(selectedItems).forEach(itemName => {
+					const itemDiv = document.createElement('div')
+					itemDiv.className = 'selected-item'
 
-            const itemLabel = document.createElement('span');
-            itemLabel.innerText = `${itemName} (${selectedItems[itemName]} шт.)`;
+					const itemLabel = document.createElement('span')
+					itemLabel.innerText = `${itemName} (${selectedItems[itemName]} шт.)`
 
-            const increaseButton = document.createElement('button');
-            increaseButton.innerText = '+';
-            increaseButton.onclick = () => changeQuantity(itemName, 1);
+					const increaseButton = document.createElement('button')
+					increaseButton.innerText = '+'
+					increaseButton.onclick = () => changeQuantity(itemName, 1)
 
-            const decreaseButton = document.createElement('button');
-            decreaseButton.innerText = '-';
-            decreaseButton.onclick = () => changeQuantity(itemName, -1);
+					const decreaseButton = document.createElement('button')
+					decreaseButton.innerText = '-'
+					decreaseButton.onclick = () => changeQuantity(itemName, -1)
 
-            itemDiv.appendChild(itemLabel);
-            itemDiv.appendChild(increaseButton);
-            itemDiv.appendChild(decreaseButton);
+					itemDiv.appendChild(itemLabel)
+					itemDiv.appendChild(increaseButton)
+					itemDiv.appendChild(decreaseButton)
 
-            selectedItemsContainer.appendChild(itemDiv);
-        });
-    }
+					selectedItemsContainer.appendChild(itemDiv)
+				})
+			}
 
-    // Изменение количества выбранных товаров
-    function changeQuantity(itemName, change) {
-        selectedItems[itemName] += change;
-        if (selectedItems[itemName] <= 0) {
-            delete selectedItems[itemName]; // Удаляем товар, если количество становится 0
-        }
-        updateSelectedItems();
-    }
+			// Изменение количества выбранных товаров
+			function changeQuantity(itemName, change) {
+				selectedItems[itemName] += change
+				if (selectedItems[itemName] <= 0) {
+					delete selectedItems[itemName] // Удаляем товар, если количество становится 0
+				}
+				updateSelectedItems()
+			}
 
-    // Закрытие попапа
-    function closeModal() {
-        document.getElementById('orderModal').style.display = 'none';
-        selectedItems = {}; // Очищаем выбранные товары при закрытии
-        updateSelectedItems(); // Обновляем список
-    }
+			// Закрытие попапа
+			function closeModal() {
+				document.getElementById('orderModal').style.display = 'none'
+				selectedItems = {} // Очищаем выбранные товары при закрытии
+				updateSelectedItems() // Обновляем список
+			}
 
-    // Подтверждение заказа
-    function confirmOrder() {
-        if (Object.keys(selectedItems).length === 0) {
-            alert('Пожалуйста, выберите хотя бы одно блюдо.');
-            return;
-        }
+			// Подтверждение заказа
+			function confirmOrder() {
+				if (Object.keys(selectedItems).length === 0) {
+					alert('Пожалуйста, выберите хотя бы одно блюдо.')
+					return
+				}
 
-        let orderSummary = 'Ваш заказ:\n';
-        Object.keys(selectedItems).forEach(itemName => {
-            orderSummary += `${itemName}: ${selectedItems[itemName]} шт.\n`;
-        });
+				let orderSummary = 'Ваш заказ:\n'
+				Object.keys(selectedItems).forEach(itemName => {
+					orderSummary += `${itemName}: ${selectedItems[itemName]} шт.\n`
+				})
 
-        alert(orderSummary + 'Спасибо за заказ!');
-        closeModal();
-    }
+				alert(orderSummary + 'Спасибо за заказ!')
+				closeModal()
+			}
 
-    // Закрытие попапа при клике вне области
-    window.onclick = function(event) {
-        const modal = document.getElementById('orderModal');
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    }
-</script>
-
-</body>
+			// Закрытие попапа при клике вне области
+			window.onclick = function (event) {
+				const modal = document.getElementById('orderModal')
+				if (event.target === modal) {
+					modal.style.display = 'none'
+				}
+			}
+		</script>
+	</body>
 </html>
