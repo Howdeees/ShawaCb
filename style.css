@@ -157,28 +157,24 @@ body {
   overflow-x: hidden;
 }
 
-.scroll-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+.scroll-section:nth-child(1) {
+  background-image: url('./images/FON1.jpg');
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
 }
 
-#section1 {
-  background-image: url('images/FON1.jpeg'); /* Замените на ваш путь */
+.scroll-section:nth-child(2) {
+  background-image: url('./images/second-image.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#section2 {
-  background-image: url('images/FON2.jpeg'); /* Замените на ваш путь */
+.scroll-section:nth-child(3) {
+  background-image: url('./images/third-image.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#section3 {
-  background-image: url('images/FON3.jpg'); /* Замените на ваш путь */
-}
 
 /* Меню */
 .container {
