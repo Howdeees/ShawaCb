@@ -122,3 +122,30 @@ footer {
   padding: 5px;
   cursor: pointer;
 }
+/* Секции */
+.section {
+  min-height: 100vh; /* Секция занимает весь экран */
+  background-size: cover; /* Фото заполняет весь фон */
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: background-image 0.5s ease-in-out;
+  margin-bottom: 10px; /* Добавим отступ для скролла */
+}
+
+/* Пример фоновых изображений */
+#slide1 {
+  background-image: url('slide1.jpg'); /* Замените 'slide1.jpg' на ваш файл */
+}
+
+#slide2 {
+  background-image: url('slide2.jpg'); /* Замените 'slide2.jpg' на ваш файл */
+}
+
+#slide3 {
+  background-image: url('slide3.jpg'); /* Замените 'slide3.jpg' на ваш файл */
+}
