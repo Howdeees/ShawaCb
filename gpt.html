@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Custom Header</title>
+		<title>Shawa Club</title>
 		<link rel="stylesheet" href="gtp.css" />
 	</head>
 	<body>
@@ -24,5 +24,199 @@
 				</div>
 			</div>
 		</header>
+		<main class="main-content">
+			<section class="menu-section">
+				<h1>Меню</h1>
+
+				<!-- Шаурма -->
+				<div class="menu-category">
+					<h2>Шаурма</h2>
+					<div class="menu-items">
+						<!-- 10 видов шаурмы -->
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="openCustomization('Шаурма Классическая', 200)"
+						>
+							<p>Шаурма Классическая</p>
+							<p>200 ₽</p>
+						</div>
+						<!-- Добавить остальные 9 видов аналогично -->
+					</div>
+				</div>
+
+				<!-- Бургеры -->
+				<div class="menu-category">
+					<h2>Бургеры</h2>
+					<div class="menu-items">
+						<!-- 7 видов бургеров -->
+						<div
+							class="menu-item"
+							onclick="addToCart('Бургер Классический', 250)"
+						>
+							<p>Бургер Классический</p>
+							<p>250 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="addToCart('Бургер Классический', 250)"
+						>
+							<p>Бургер Классический</p>
+							<p>250 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="addToCart('Бургер Классический', 250)"
+						>
+							<p>Бургер Классический</p>
+							<p>250 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="addToCart('Бургер Классический', 250)"
+						>
+							<p>Бургер Классический</p>
+							<p>250 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="addToCart('Бургер Классический', 250)"
+						>
+							<p>Бургер Классический</p>
+							<p>250 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="addToCart('Бургер Классический', 250)"
+						>
+							<p>Бургер Классический</p>
+							<p>250 ₽</p>
+						</div>
+						<div
+							class="menu-item"
+							onclick="addToCart('Бургер Классический', 250)"
+						>
+							<p>Бургер Классический</p>
+							<p>250 ₽</p>
+						</div>
+						<!-- Добавить остальные 6 видов аналогично -->
+					</div>
+				</div>
+
+				<!-- Закуски -->
+				<div class="menu-category">
+					<h2>Закуски</h2>
+					<div class="menu-items">
+						<!-- 3 закуски -->
+						<div class="menu-item" onclick="addToCart('Картофель фри', 100)">
+							<p>Картофель фри</p>
+							<p>100 ₽</p>
+						</div>
+						<div class="menu-items">
+						<!-- 3 закуски -->
+						<div class="menu-item" onclick="addToCart('Картофель фри', 100)">
+							<p>Картофель фри</p>
+							<p>100 ₽</p>
+						</div>
+						<div class="menu-items">
+						<!-- 3 закуски -->
+						<div class="menu-item" onclick="addToCart('Картофель фри', 100)">
+							<p>Картофель фри</p>
+							<p>100 ₽</p>
+						</div>
+						<!-- Добавить остальные 2 вида аналогично -->
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Модальное окно настройки шаурмы -->
+		<div id="customization-modal" class="modal">
+			<div class="modal-content">
+				<h2 id="customization-title"></h2>
+				<p>Выберите дополнительные ингредиенты:</p>
+				<div class="customization-options">
+					<label
+						><input type="checkbox" value="Сыр (+20 ₽)" /> Сыр (+20 ₽)</label
+					>
+					<label
+						><input type="checkbox" value="Острый соус (+15 ₽)" /> Острый соус
+						(+15 ₽)</label
+					>
+					<label
+						><input type="checkbox" value="Бекон (+30 ₽)" /> Бекон (+30
+						₽)</label
+					>
+				</div>
+				<button class="modal-button" onclick="addCustomizedToCart()">
+					Добавить в корзину
+				</button>
+				<button class="modal-close" onclick="closeModal()">Закрыть</button>
+			</div>
+		</div>
+
+		<script src="scripts.js"></script>
 	</body>
 </html>
