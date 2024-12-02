@@ -7,6 +7,28 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<div class="section" id="slide1"></div>
+    <div class="section" id="slide2"></div>
+    <div class="section" id="slide3"></div>
+		<script>
+			document.addEventListener("scroll", () => {
+				const sections = document.querySelectorAll(".section");
+				const scrollPosition = window.scrollY + window.innerHeight / 2;
+	
+				sections.forEach((section) => {
+					const sectionTop = section.offsetTop;
+					const sectionHeight = section.offsetHeight;
+	
+					if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+						section.style.backgroundColor = section.id === "slide1" 
+							? "#ff9999" 
+							: section.id === "slide2" 
+							? "#99ccff" 
+							: "#99ff99";
+					}
+				});
+			});
+		</script>
 		<div class="container">
 			<h1>Меню ресторана</h1>
 
