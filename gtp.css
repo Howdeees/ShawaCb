@@ -1,0 +1,76 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+.header {
+	background-color: #333;
+	color: white;
+	padding: 10px 0;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+}
+
+.menu-button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.menu-link {
+	color: white;
+	text-decoration: none;
+	margin-right: 15px;
+	font-size: 14px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	height: 40px;
+	margin-right: 10px;
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+}
+
+.phone {
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	margin-right: 20px;
+}
+
+.client-button {
+	background-color: #f90;
+	border: none;
+	padding: 8px 15px;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.client-button:hover {
+	background-color: #e68a00;
+}
