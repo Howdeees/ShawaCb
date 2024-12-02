@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Смена фона при скроллинге</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказ еды</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Первая секция -->
-  <div class="section" id="slide1">
-    <h1>Добро пожаловать!</h1>
-    <p>Прокрутите вниз, чтобы выбрать блюдо.</p>
-  </div>
-
-  <!-- Вторая секция с выбором блюд -->
-  <div class="section" id="slide2">
-    <div class="menu-item">
-      <h2>Шаурма</h2>
-      <p>Традиционная шаурма с курицей, свежими овощами и соусом.</p>
+    <div class="scroll-section" id="section1">
+        <h1>Добро пожаловать в наш ресторан</h1>
+        <p>Нажмите, чтобы узнать больше!</p>
     </div>
 
-    <div class="menu-item">
-      <h2>Бургеры</h2>
-      <p>Сочные бургеры с говяжьей котлетой, сыром и свежими овощами.</p>
+    <div class="scroll-section" id="section2">
+        <div class="container">
+            <h1>Меню ресторана</h1>
+
+            <div class="menu-item" onclick="openModal('Шаурма')">
+                <h2>Шаурма</h2>
+                <p>Традиционная шаурма с курицей, свежими овощами и соусом.</p>
+            </div>
+
+            <div class="menu-item" onclick="openModal('Бургеры')">
+                <h2>Бургеры</h2>
+                <p>Сочные бургеры с говяжьей котлетой, сыром и свежими овощами.</p>
+            </div>
+
+            <div class="menu-item" onclick="openModal('Фритюр')">
+                <h2>Фритюр</h2>
+                <p>Ассорти из картофеля фри и луковых колец, обжаренных во фритюре.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="menu-item">
-      <h2>Фритюр</h2>
-      <p>Ассорти из картофеля фри и луковых колец, обжаренных во фритюре.</p>
+    <div class="scroll-section" id="section3">
+        <h1>Остались вопросы?</h1>
+        <p>Свяжитесь с нами, и мы ответим на все ваши вопросы!</p>
     </div>
-  </div>
 
-  <!-- Третья секция -->
-  <div class="section" id="slide3">
-    <h1>Спасибо за внимание!</h1>
-    <p>Мы рады, что вы посетили наш сайт.</p>
-  </div>
+    <!-- Модальное окно -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-header" class="modal-header"></div>
+            <div id="modal-body">
+                <div class="icon-container" id="icon-container">
+                    <!-- Иконки для выбранного пункта меню будут вставляться сюда -->
+                </div>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="selected-items" id="selected-items">
+                <!-- Выбранные товары будут появляться здесь -->
+            </div>
+            <button style="margin-top: 10px" onclick="confirmOrder()">
+                Подтвердить заказ
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
