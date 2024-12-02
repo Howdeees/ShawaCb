@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,regular,500,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700);
 body {
 	margin: 0;
 	font-family: 'M PLUS Rounded 1c';
@@ -7,16 +8,27 @@ body {
 }
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
 	background-color: #333;
 	color: white;
 	padding: 10px 0;
 	font-weight: 700;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+	padding-top: 80px; /* Отступ равен высоте хедера */
 }
 
 .head {
+	font-family: 'Arvo';
+	font-weight: 1000;
 	font-size: 50px;
 	color: #f90;
-	-webkit-text-stroke: 1px #000000;
 }
 
 .container {
@@ -160,4 +172,89 @@ h2 {
 .modal-button:hover,
 .modal-close:hover {
 	background-color: #e68a00;
+}
+
+/* Общий стиль футера */
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding: 40px 20px 20px;
+	font-family: Arial, sans-serif;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Разделы меню */
+.footer-columns {
+	display: flex;
+	gap: 20px;
+}
+
+.footer-column h3 {
+	color: #f90;
+	margin-bottom: 10px;
+}
+
+.footer-column a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+	text-decoration: underline;
+}
+
+/* Статистика */
+.footer-stats {
+	flex: 1;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.footer-stats p {
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+/* Контакты */
+.footer-contacts h3 {
+	color: #f90;
+}
+
+.footer-contacts a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer-contacts a:hover {
+	text-decoration: underline;
+}
+
+.footer-socials {
+	margin-top: 10px;
+}
+
+.footer-socials a {
+	margin-right: 10px;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+	text-align: center;
+	margin-top: 20px;
+	border-top: 1px solid #444;
+	padding-top: 10px;
+	font-size: 14px;
+	color: #bbb;
 }
