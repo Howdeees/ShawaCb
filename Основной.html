@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ еды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .menu-item {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu-item:hover {
+            background-color: #f0f0f0;
+        }
+        .menu-item h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .menu-item p {
+            font-size: 16px;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Стили для попапа */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+        }
+        .modal-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Стили для иконок */
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+        .icon img {
+            width: 80px;
+            height: 80px;
+        }
+        .icon.active {
+            border-color: #ff9900;
+        }
+        .icon p {
+            text-align: center;
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+        /* Стили для выбранных товаров */
+        .selected-items {
+            margin-top: 20px;
+        }
+        .selected-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .selected-item button {
+            margin-left: 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Меню ресторана</h1>
+
+    <div class="menu-item" onclick="openModal('Шаурма')">
+        <h2>Шаурма</h2>
+        <p>Традиционная шаурма с курицей, свежими овощами и соусом.</p>
+    </div>
+
+    <div class="menu-item" onclick="openModal('Бургеры')">
+        <h2>Бургеры</h2>
+        <p>Сочные бургеры с говяжьей котлетой, сыром и свежими овощами.</p>
+    </div>
+
+    <div class="menu-item" onclick="openModal('Фритюр')">
+        <h2>Фритюр</h2>
+        <p>Ассорти из картофеля фри и луковых колец, обжаренных во фритюре.</p>
+    </div>
+</div>
+
+<footer>
+    © 2024 Заказ еды
+</footer>
+
+<!-- Модальное окно -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-header" class="modal-header"></div>
+        <div id="modal-body">
+            <div class="icon-container" id="icon-container">
+                <!-- Иконки для выбранного пункта меню будут вставляться сюда -->
+            </div>
+        </div>
+        
+        <div class="selected-items" id="selected-items">
+            <!-- Выбранные товары будут появляться здесь -->
+        </div>
+        <button style="margin-top: 10px;" onclick="confirmOrder()">Подтвердить заказ</button>
+    </div>
+</div>
+
+<script>
+    const items = {
+        'Шаурма': [
+            { name: 'Шаурма классическая', image: 'classic-shaurma.jpg' },
+            { name: 'Шаурма с говядиной', image: 'beef-shaurma.jpg' },
+            { name: 'Шаурма с курицей и сыром', image: 'chicken-cheese-shaurma.jpg' },
+            { name: 'Вегетарианская шаурма', image: 'veggie-shaurma.jpg' }
+        ],
+        'Бургеры': [
+            { name: 'Чизбургер', image: 'cheeseburger.jpg' },
+            { name: 'Сырный бургер', image: 'cheese-burger.jpg' },
+            { name: 'Двойной чизбургер', image: 'double-cheeseburger.jpg' }
+        ],
+        'Фритюр': [
+            { name: 'Картофель фри', image: 'fries.jpg' },
+            { name: 'Стрипсы', image: 'strips.jpg' }
+        ]
+    };
+
+    let selectedItems = {}; // Хранение выбранных товаров и их количества
+
+    // Открытие попапа с иконками выбора
+    function openModal(itemName) {
+        document.getElementById('modal-header').innerText = 'Выберите ' + itemName;
+
+        const iconContainer = document.getElementById('icon-container');
+        iconContainer.innerHTML = ''; // Очищаем контейнер с иконками
+
+        if (items[itemName]) {
+            items[itemName].forEach(item => {
+                const iconDiv = document.createElement('div');
+                iconDiv.className = 'icon';
+                iconDiv.onclick = () => selectItem(item.name);
+
+                const img = document.createElement('img');
+                img.src = item.image; // Здесь будут изображения для каждого варианта
+                img.alt = item.name;
+
+                const itemNameLabel = document.createElement('p');
+                itemNameLabel.innerText = item.name;
+
+                iconDiv.appendChild(img);
+                iconDiv.appendChild(itemNameLabel);
+                iconContainer.appendChild(iconDiv);
+            });
+        }
+
+        document.getElementById('orderModal').style.display = 'block';
+    }
+
+    // Выбор пункта меню и добавление его в список выбранных товаров
+    function selectItem(itemName) {
+        if (selectedItems[itemName]) {
+            selectedItems[itemName] += 1; // Увеличиваем количество выбранного товара
+        } else {
+            selectedItems[itemName] = 1; // Добавляем товар в список
+        }
+        updateSelectedItems();
+    }
+
+    // Обновление списка выбранных товаров
+    function updateSelectedItems() {
+        const selectedItemsContainer = document.getElementById('selected-items');
+        selectedItemsContainer.innerHTML = ''; // Очищаем список перед обновлением
+
+        Object.keys(selectedItems).forEach(itemName => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'selected-item';
+
+            const itemLabel = document.createElement('span');
+            itemLabel.innerText = `${itemName} (${selectedItems[itemName]} шт.)`;
+
+            const increaseButton = document.createElement('button');
+            increaseButton.innerText = '+';
+            increaseButton.onclick = () => changeQuantity(itemName, 1);
+
+            const decreaseButton = document.createElement('button');
+            decreaseButton.innerText = '-';
+            decreaseButton.onclick = () => changeQuantity(itemName, -1);
+
+            itemDiv.appendChild(itemLabel);
+            itemDiv.appendChild(increaseButton);
+            itemDiv.appendChild(decreaseButton);
+
+            selectedItemsContainer.appendChild(itemDiv);
+        });
+    }
+
+    // Изменение количества выбранных товаров
+    function changeQuantity(itemName, change) {
+        selectedItems[itemName] += change;
+        if (selectedItems[itemName] <= 0) {
+            delete selectedItems[itemName]; // Удаляем товар, если количество становится 0
+        }
+        updateSelectedItems();
+    }
+
+    // Закрытие попапа
+    function closeModal() {
+        document.getElementById('orderModal').style.display = 'none';
+        selectedItems = {}; // Очищаем выбранные товары при закрытии
+        updateSelectedItems(); // Обновляем список
+    }
+
+    // Подтверждение заказа
+    function confirmOrder() {
+        if (Object.keys(selectedItems).length === 0) {
+            alert('Пожалуйста, выберите хотя бы одно блюдо.');
+            return;
+        }
+
+        let orderSummary = 'Ваш заказ:\n';
+        Object.keys(selectedItems).forEach(itemName => {
+            orderSummary += `${itemName}: ${selectedItems[itemName]} шт.\n`;
+        });
+
+        alert(orderSummary + 'Спасибо за заказ!');
+        closeModal();
+    }
+
+    // Закрытие попапа при клике вне области
+    window.onclick = function(event) {
+        const modal = document.getElementById('orderModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
