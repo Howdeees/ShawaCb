@@ -117,10 +117,81 @@ h2 {
 	margin-bottom: 40px;
 }
 
-.menu-items {
+/* Основной стиль секции меню */
+.menu-section {
+	background-color: #333;
+	color: #fff;
+	padding: 40px 20px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+
+.menu-container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.menu-rows {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 15px;
+	justify-content: space-between; /* Распределение колонок */
+	align-items: flex-start; /* Выравнивание по верху */
+	margin-bottom: 30px;
+}
+
+.menu-column {
+	width: 45%; /* Ширина колонок */
+	text-align: left;
+}
+
+.menu-column h2 {
+	font-size: 24px;
+	color: #f90;
+	margin-bottom: 10px;
+}
+
+.menu-column ul {
+	list-style: none;
+	padding: 0;
+}
+
+.menu-column li {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+/* Центрированный блок для закусок */
+.menu-snacks {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.menu-snacks h2 {
+	font-size: 24px;
+	color: #f90;
+	margin-bottom: 10px;
+}
+
+.menu-snacks ul {
+	list-style: none;
+	padding: 0;
+}
+
+.menu-snacks li {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 768px) {
+	.menu-rows {
+		flex-direction: column; /* Колонки переходят в вертикальное расположение */
+		align-items: center;
+	}
+
+	.menu-column {
+		width: 100%;
+		margin-bottom: 20px;
+	}
 }
 
 .menu-item {
