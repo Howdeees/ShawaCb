@@ -1,18 +1,50 @@
+/* Основные стили */
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Предотвращаем горизонтальный скроллинг */
 }
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Стили для каждой секции */
+.scroll-section {
+  min-height: 100vh; /* Устанавливаем минимальную высоту на всю высоту экрана */
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Убираем повторение фона */
+  background-color: transparent; /* Устанавливаем прозрачный фон */
+  filter: none !important; /* Убираем все фильтры */
+  transition: none; /* Убираем плавные переходы для фона */
+}
+
+/* Задаем фоны для секций */
+.scroll-section:nth-child(1) {
+  background-image: url('./images/first-image.jpg'); /* Замените на свой путь */
+}
+
+.scroll-section:nth-child(2) {
+  background-image: url('./images/second-image.jpg'); /* Замените на свой путь */
+}
+
+.scroll-section:nth-child(3) {
+  background-image: url('./images/third-image.jpg'); /* Замените на свой путь */
+}
+
+/* Стили для контейнера */
 .container {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
 }
-h1 {
-  text-align: center;
-  color: #333;
-}
+
 .menu-item {
   background-color: white;
   padding: 20px;
@@ -22,18 +54,22 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .menu-item:hover {
   background-color: #f0f0f0;
 }
+
 .menu-item h2 {
   margin: 0;
   font-size: 24px;
   color: #333;
 }
+
 .menu-item p {
   font-size: 16px;
   color: #666;
 }
+
 footer {
   text-align: center;
   padding: 10px;
@@ -43,7 +79,7 @@ footer {
   width: 100%;
   bottom: 0;
 }
-/* Стили для попапа */
+
 .modal {
   display: none;
   position: fixed;
@@ -54,6 +90,7 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal-content {
   background-color: white;
   margin: 15% auto;
@@ -61,29 +98,33 @@ footer {
   border-radius: 8px;
   width: 50%;
 }
+
 .modal-header {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
 }
+
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-/* Стили для иконок */
+
 .icon-container {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
 }
+
 .icon {
   width: 100px;
   height: 100px;
@@ -95,130 +136,35 @@ footer {
   cursor: pointer;
   transition: border-color 0.3s ease;
 }
+
 .icon img {
   width: 80px;
   height: 80px;
 }
+
 .icon.active {
   border-color: #ff9900;
 }
+
 .icon p {
   text-align: center;
   margin: 5px 0 0;
   font-size: 14px;
 }
-/* Стили для выбранных товаров */
+
 .selected-items {
   margin-top: 20px;
 }
+
 .selected-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .selected-item button {
   margin-left: 10px;
   padding: 5px;
   cursor: pointer;
-}
-/* Секции */
-.section {
-  min-height: 100vh; /* Секция занимает весь экран */
-  background-size: cover; /* Фото заполняет весь фон */
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  transition: background-image 0.5s ease-in-out;
-  margin-bottom: 10px; /* Добавим отступ для скролла */
-}
-
-/* Пример фоновых изображений */
-#slide1 {
-  background-image: url('slide1.jpg'); /* Замените 'slide1.jpg' на ваш файл */
-}
-
-#slide2 {
-  background-image: url('slide2.jpg'); /* Замените 'slide2.jpg' на ваш файл */
-}
-
-#slide3 {
-  background-image: url('slide3.jpg'); /* Замените 'slide3.jpg' на ваш файл */
-}
-/* Основные стили */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-.scroll-section {
-  min-height: 100vh; /* Устанавливает минимальную высоту на всю высоту экрана */
-  padding: 20px;
-  box-sizing: border-box;
-}
-.scroll-section:nth-child(1) {
-  background-image: url('./images1/FON1.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.scroll-section:nth-child(2) {
-  background-image: url('./images1/FON2.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.scroll-section:nth-child(3) {
-  background-image: url('./images1/FON3.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-
-/* Меню */
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-}
-
-.menu-item {
-  background-color: white;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.menu-item:hover {
-  background-color: #f0f0f0;
-}
-
-/* Стили для модального окна */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: white;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 50%;
 }
