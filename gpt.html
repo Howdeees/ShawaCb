@@ -24,146 +24,88 @@
 				</div>
 			</div>
 		</header>
-		<main class="main-content">
-			<section class="menu-section">
-				<h1>Меню</h1>
-
-				<!-- Шаурма -->
-				<div class="menu-category">
+		<section class="menu-section">
+			<h1>Меню</h1>
+	
+			<!-- Шаурма -->
+			<div class="menu-category menu-left">
 					<h2>Шаурма</h2>
 					<div class="menu-items">
-						<!-- 10 видов шаурмы -->
-						<div
-							class="menu-item"
-							onclick="openCustomization('Шаурма Классическая', 200)"
-						>
-							<p>Шаурма Классическая</p>
-							<p>200 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="openCustomization('Шаурма Сырная', 230)"
-						>
-							<p>Шаурма Сырная</p>
-							<p>230 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="openCustomization('Шаурма MAXXX', 290)"
-						>
-							<p>Шаурма MAXXX</p>
-							<p>290 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="openCustomization('Шаурма Царская', 260)"
-						>
-							<p>Шаурма Царская</p>
-							<p>260 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="openCustomization('Шаурма Терияки', 300)"
-						>
-							<p>Шаурма Терияки</p>
-							<p>300 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="openCustomization('Шаурма Со стрипсами', 240)"
-						>
-							<p>Шаурма Со стрипсами</p>
-							<p>240 ₽</p>
-						</div>
-						<!-- Добавить остальные 9 видов аналогично -->
+							<!-- Добавить 8 позиций -->
+							<div class="menu-item" onclick="addToCart('Шаурма Студенческая', 140)">
+									<p>Шаурма Студенческая</p>
+									<p>140 ₽</p>
+							</div>
+							<div class="menu-item" onclick="addToCart('Шаурма Классическая', 200)">
+								<p>Шаурма Классическая</p>
+								<p>200 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Сырная', 230)">
+								<p>Шаурма Сырная</p>
+								<p>230 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Со стрипсами', 240)">
+								<p>Шаурма Со стрипсами</p>
+								<p>240 ₽</p>
+						  </div>
+						  <div class="menu-item" onclick="addToCart('Шаурма Царская', 260)">
+							  <p>Шаурма Царская</p>
+							  <p>260 ₽</p>
+					    </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Царская со стрипсами', 285)">
+								<p>Шаурма Царская со стрипсами</p>
+								<p>285 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма MAXXX', 290)">
+								<p>Шаурма MAXXX</p>
+								<p>290 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма MAXXX со стрипсами', 320)">
+								<p>Шаурма MAXXX со стрипсами</p>
+								<p>320 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Терияки', 300)">
+								<p>Шаурма Терияки</p>
+								<p>300 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Терияки с креветками', 340)">
+								<p>Шаурма Терияки с креветками</p>
+								<p>340 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Вегетарианская', 150)">
+								<p>Шаурма Вегетарианская</p>
+								<p>150 ₽</p>
+						  </div>
+							<!-- Повторить аналогично для 7 других -->
 					</div>
-				</div>
-
-				<!-- Бургеры -->
-				<div class="menu-category">
+			</div>
+	
+			<!-- Бургеры -->
+			<div class="menu-category menu-right">
 					<h2>Бургеры</h2>
 					<div class="menu-items">
-						<!-- 7 видов бургеров -->
-						<div
-							class="menu-item"
-							onclick="addToCart('Бургер Классический', 250)"
-						>
-							<p>Бургер Классический</p>
-							<p>250 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="addToCart('Бургер Классический', 250)"
-						>
-							<p>Бургер Классический</p>
-							<p>250 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="addToCart('Бургер Классический', 250)"
-						>
-							<p>Бургер Классический</p>
-							<p>250 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="addToCart('Бургер Классический', 250)"
-						>
-							<p>Бургер Классический</p>
-							<p>250 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="addToCart('Бургер Классический', 250)"
-						>
-							<p>Бургер Классический</p>
-							<p>250 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="addToCart('Бургер Классический', 250)"
-						>
-							<p>Бургер Классический</p>
-							<p>250 ₽</p>
-						</div>
-						<div
-							class="menu-item"
-							onclick="addToCart('Бургер Классический', 250)"
-						>
-							<p>Бургер Классический</p>
-							<p>250 ₽</p>
-						</div>
-						<!-- Добавить остальные 6 видов аналогично -->
+							<!-- Добавить 8 позиций -->
+							<div class="menu-item" onclick="addToCart('Бургер Классический', 250)">
+									<p>Бургер Классический</p>
+									<p>250 ₽</p>
+							</div>
+							<!-- Повторить аналогично для 7 других -->
 					</div>
-				</div>
-
-				<!-- Закуски -->
-				<div class="menu-category">
+			</div>
+	
+			<!-- Закуски -->
+			<div class="menu-category menu-center">
 					<h2>Закуски</h2>
 					<div class="menu-items">
-						<!-- 3 закуски -->
-						<div class="menu-item" onclick="addToCart('Картофель фри', 100)">
-							<p>Картофель фри</p>
-							<p>100 ₽</p>
-						</div>
-						<div class="menu-items">
-						<!-- 3 закуски -->
-						<div class="menu-item" onclick="addToCart('Картофель фри', 100)">
-							<p>Картофель фри</p>
-							<p>100 ₽</p>
-						</div>
-						<div class="menu-items">
-						<!-- 3 закуски -->
-						<div class="menu-item" onclick="addToCart('Картофель фри', 100)">
-							<p>Картофель фри</p>
-							<p>100 ₽</p>
-						</div>
-						<!-- Добавить остальные 2 вида аналогично -->
+							<!-- Добавить 8 позиций -->
+							<div class="menu-item" onclick="addToCart('Картофель фри', 100)">
+									<p>Картофель фри</p>
+									<p>100 ₽</p>
+							</div>
+							<!-- Повторить аналогично для 7 других -->
 					</div>
-				</div>
-			</section>
-		</main>
-
+			</div>
+	</section>
 		<!-- Модальное окно настройки шаурмы -->
 		<div id="customization-modal" class="modal">
 			<div class="modal-content">

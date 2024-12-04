@@ -48,7 +48,7 @@ body {
 .menu-button {
 	background: none;
 	border: none;
-	color: white;
+	color: rgb(255, 254, 254);
 	font-size: 20px;
 	cursor: pointer;
 	margin-right: 10px;
@@ -109,22 +109,21 @@ h2 {
 }
 
 .menu-section {
-	margin: 20px auto;
-	max-width: 800px;
-}
-
-.menu-category {
-	margin-bottom: 40px;
+	margin: 250px ;
+	max-width: 4000px;
 }
 
 /* Основной стиль секции меню */
 .menu-section {
-	background-color: #333;
-	color: #fff;
-	padding: 40px 20px;
+	background-image: url(images1/FOB.jpg);  /* Путь к твоей фотографии */
+	background-size: cover; /* Растянуть изображение, чтобы оно покрывало всю секцию */
+	background-position: center; /* Центрировать изображение */
+	background-repeat: no-repeat; /* Отключить повторение */
+	color: #fff; /* Контрастный цвет текста на фоне */
+	padding: 40px 20px; /* Отступы */
 	text-align: center;
-	font-family: Arial, sans-serif;
 }
+
 
 .menu-container {
 	max-width: 900px;
@@ -192,21 +191,6 @@ h2 {
 		width: 100%;
 		margin-bottom: 20px;
 	}
-}
-
-.menu-item {
-	background-color: #333;
-	padding: 15px;
-	border-radius: 10px;
-	text-align: center;
-	cursor: pointer;
-	width: 180px;
-	transition: transform 0.3s;
-}
-
-.menu-item:hover {
-	transform: scale(1.05);
-	background-color: #444;
 }
 
 /* Модальное окно */
@@ -328,4 +312,69 @@ h2 {
 	padding-top: 10px;
 	font-size: 14px;
 	color: #bbb;
+}
+/* Расположение категорий */
+.menu-category {
+	margin-bottom: 40px;
+}
+
+.menu-left {
+	float: left;
+	width: 48%; /* Занимает половину экрана */
+	text-align: left;
+}
+
+.menu-right {
+	float: right;
+	width: 48%; /* Занимает половину экрана */
+	text-align: left;
+}
+
+.menu-center {
+	clear: both; /* Отдельная строка */
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* Общий стиль для элементов */
+.menu-item {
+	background-color: #333;
+	padding: 5px;
+	border-radius: 10px;
+	text-align: center;
+	cursor: pointer;
+	width: 180px;
+	margin: 10px auto; /* Центрируем элементы */
+	transition: transform 0.3s;
+}
+
+.menu-item:hover {
+	transform: scale(1.45);
+	background-color: #444;
+}
+
+/* Контейнер для меню */
+.menu-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Два столбца */
+	gap: 10px;
+	justify-items: center;
+	align-items: center;
+}
+
+/* Для адаптивности */
+@media (max-width: 768px) {
+	.menu-left,
+	.menu-right {
+			float: none;
+			width: 100%; /* На мобильных категория занимает весь экран */
+			text-align: center;
+	}
+	.menu-center {
+			margin-top: 40px;
+	}
+
+	.menu-items {
+			grid-template-columns: repeat(1, 1fr); /* Один столбец */
+	}
 }
