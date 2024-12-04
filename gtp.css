@@ -330,6 +330,15 @@ h2 {
 	text-align: left;
 }
 
+.menu-right .menu-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Два равных столбца */
+	gap: 20px; /* Отступы между элементами */
+	justify-items: center; /* Центрируем каждый элемент */
+	align-items: center; /* Выравниваем элементы вертикально */
+	clear: both; /* Сбрасываем float */
+}
+
 .menu-center {
 	clear: both; /* Отдельная строка */
 	text-align: center;
@@ -338,14 +347,24 @@ h2 {
 
 /* Общий стиль для элементов */
 .menu-item {
+	width: 180px; /* Фиксированная ширина */
+	height: 100px; /* Фиксированная высота */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
 	background-color: #333;
-	padding: 5px;
 	border-radius: 10px;
+	margin: 10px;
 	text-align: center;
 	cursor: pointer;
-	width: 180px;
-	margin: 10px auto; /* Центрируем элементы */
 	transition: transform 0.3s;
+}
+
+
+.menu-item p {
+	margin: 5px 0; /* Убираем лишние отступы */
 }
 
 .menu-item:hover {
@@ -357,8 +376,8 @@ h2 {
 .menu-items {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* Два столбца */
-	gap: 10px;
-	justify-items: center;
+	gap: 20px; /* Отступ между элементами */
+	justify-items: center; /* Центрируем элементы */
 	align-items: center;
 }
 
