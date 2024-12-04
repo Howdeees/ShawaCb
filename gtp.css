@@ -323,32 +323,24 @@ h2 {
 	width: 48%; /* Занимает половину экрана */
 	text-align: left;
 }
-
 .menu-right {
 	float: right;
 	width: 48%; /* Занимает половину экрана */
 	text-align: left;
 }
 
-.menu-right .menu-items {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Два равных столбца */
-	gap: 20px; /* Отступы между элементами */
-	justify-items: center; /* Центрируем каждый элемент */
-	align-items: center; /* Выравниваем элементы вертикально */
-	clear: both; /* Сбрасываем float */
-}
-
 .menu-center {
 	clear: both; /* Отдельная строка */
 	text-align: center;
 	margin-top: 20px;
+	gap: 20px 30px;
 }
 
 /* Общий стиль для элементов */
 .menu-item {
 	width: 180px; /* Фиксированная ширина */
 	height: 100px; /* Фиксированная высота */
+	margin: 10px; /* Универсальные отступы */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -397,3 +389,4 @@ h2 {
 			grid-template-columns: repeat(1, 1fr); /* Один столбец */
 	}
 }
+
