@@ -108,21 +108,6 @@ h2 {
 	padding: 20px;
 }
 
-.menu-section {
-	margin: 250px ;
-	max-width: 4000px;
-}
-
-/* Основной стиль секции меню */
-.menu-section {
-	background-image: url(images1/FOB.jpg);  /* Путь к твоей фотографии */
-	background-size: cover; /* Растянуть изображение, чтобы оно покрывало всю секцию */
-	background-position: center; /* Центрировать изображение */
-	background-repeat: no-repeat; /* Отключить повторение */
-	color: #fff; /* Контрастный цвет текста на фоне */
-	padding: 40px 20px; /* Отступы */
-	text-align: center;
-}
 
 
 .menu-container {
@@ -313,45 +298,71 @@ h2 {
 	font-size: 14px;
 	color: #bbb;
 }
-/* Расположение категорий */
+
+.menu-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Две колонки */
+	grid-template-rows: 1fr 1fr; /* Две строки */
+	gap: 20px; /* Отступы между элементами */
+	height: 70vh; /* Занимает 70% высоты окна */
+	width: 80%; /* На всю ширину окна */
+	background-image: url(images1/FOB.jpg); /* Фон для секции */
+	background-size: cover; /* Растянуть фон по размеру секции */
+	background-position: center; /* Центрируем фон */
+	background-repeat: no-repeat; /* Отключаем повторение */
+	box-sizing: border-box; /* Учитываем отступы */
+	margin: 50px auto; /* Центровка по горизонтали */
+  border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 .menu-category {
-	margin-bottom: 40px;
-}
-
-.menu-left {
-	float: left;
-	width: 48%; /* Занимает половину экрана */
-	text-align: left;
-}
-.menu-right {
-	float: right;
-	width: 48%; /* Занимает половину экрана */
-	text-align: left;
-}
-
-.menu-center {
-	clear: both; /* Отдельная строка */
-	text-align: center;
-	margin-top: 20px;
-	gap: 20px 30px;
-}
-
-/* Общий стиль для элементов */
-.menu-item {
-	width: 180px; /* Фиксированная ширина */
-	height: 100px; /* Фиксированная высота */
-	margin: 10px; /* Универсальные отступы */
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	padding: 10px;
-	background-color: #333;
-	border-radius: 10px;
-	margin: 10px;
-	text-align: center;
-	cursor: pointer;
-	transition: transform 0.3s;
+	background-color: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон для box */
+	color: #fff; /* Цвет текста */
+	padding: 20px;
+	border-radius: 10px; /* Скругление углов */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+}
+/* Позиционирование box1 в левом верхнем углу */
+.menu-box1 {
+	grid-column: 1 / 2; /* Первый столбец */
+	grid-row: 1 / 2; /* Первая строка */
+}
+
+/* Позиционирование box2 в правом верхнем углу */
+.menu-box2 {
+	grid-column: 2 / 3; /* Второй столбец */
+	grid-row: 1 / 2; /* Первая строка */
+}
+
+/* Позиционирование box3 в левом нижнем углу */
+.menu-box3 {
+	grid-column: 1 / 2; /* Первый столбец */
+	grid-row: 2 / 3; /* Вторая строка */
+}
+
+/* Позиционирование box4 в правом нижнем углу */
+.menu-box4 {
+	grid-column: 2 / 3; /* Второй столбец */
+	grid-row: 2 / 3; /* Вторая строка */
+}
+
+/* Box-specific styles */
+.menu-box1, .menu-box2, .menu-box3, .menu-box4 {
+	display: flex;
+	flex-direction: column; /* Элементы в колонке */
+	align-items: center; /* Центрируем содержимое */
+}
+
+.menu-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Два столбца */
+	gap: 15px; /* Расстояние между строками и колонками */
+	width: 100%; /* Занимает всю ширину категории */
 }
 
 
@@ -364,24 +375,16 @@ h2 {
 	background-color: #444;
 }
 
-/* Контейнер для меню */
-.menu-items {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Два столбца */
-	gap: 20px; /* Отступ между элементами */
-	justify-items: center; /* Центрируем элементы */
-	align-items: center;
-}
 
 /* Для адаптивности */
 @media (max-width: 768px) {
-	.menu-left,
-	.menu-right {
+	.menu-box1,
+	.menu-box2 {
 			float: none;
 			width: 100%; /* На мобильных категория занимает весь экран */
 			text-align: center;
 	}
-	.menu-center {
+	.menu-box3 {
 			margin-top: 40px;
 	}
 
