@@ -18,6 +18,7 @@ body {
 	padding: 10px 0;
 	font-weight: 700;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	margin-bottom: 0; /* Минимальные отступы после header */
 }
 
 .main-content {
@@ -304,43 +305,63 @@ h2 {
 	grid-template-columns: 1fr 1fr; /* Две колонки */
 	grid-template-rows: 1fr 1fr; /* Две строки */
 	gap: 20px; /* Отступы между элементами */
-	height: 70vh; /* Занимает 70% высоты окна */
+	height: auto; /* Занимает 70% высоты окна */
 	width: 80%; /* На всю ширину окна */
 	background-image: url(images1/FOB.jpg); /* Фон для секции */
 	background-size: cover; /* Растянуть фон по размеру секции */
 	background-position: center; /* Центрируем фон */
 	background-repeat: no-repeat; /* Отключаем повторение */
 	box-sizing: border-box; /* Учитываем отступы */
-	margin: 50px auto; /* Центровка по горизонтали */
+	margin: 100px auto 50px; /* Центровка по горизонтали */
   border-radius: 15px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-section h1 {
+	position: absolute; /* Абсолютное позиционирование */
+	top: 14%; /* Середина секции */
+	left: 50%; /* Середина по горизонтали */
+	transform: translate(-50%, -50%); /* Смещаем на половину ширины и высоты, чтобы центрировать */
+	color: white; /* Цвет текста */
+	font-size: 48px; /* Размер текста */
+	font-weight: bold; /* Жирный текст */
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Тень для контраста */
+	z-index: 10; /* Поверх других элементов */
+	text-align: center;
 }
 
 .menu-category {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон для box */
-	color: #fff; /* Цвет текста */
-	padding: 20px;
-	border-radius: 10px; /* Скругление углов */
+	display: flex; /* Flexbox для внутренних элементов */
+	flex-direction: column; /* Вертикальное размещение содержимого */
+	justify-content: flex-start; /* Выравнивание содержимого сверху */
+	align-items: center; /* Центрирование содержимого по горизонтали */
+	background-color: rgba(51, 51, 51, 0.8); /* Фон для box */
+	border: 2px solid #f90; /* Обводка с динамическими размерами */
+	border-radius: 10px; /* Скругление углов (опционально) */
+	padding: 10px; /* Внутренние отступы */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	box-sizing: border-box; /* Учитываем padding в размерах box */
+	width: auto; /* Автоматическая ширина */
+	height: auto; /* Автоматическая высота */
 }
+
 /* Позиционирование box1 в левом верхнем углу */
 .menu-box1 {
+	margin-top: 89px;
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 1 / 2; /* Первая строка */
 }
 
 /* Позиционирование box2 в правом верхнем углу */
 .menu-box2 {
+	align-self: start;
+	margin-top: 90px;
 	grid-column: 2 / 3; /* Второй столбец */
 	grid-row: 1 / 2; /* Первая строка */
 }
 
 /* Позиционирование box3 в левом нижнем углу */
 .menu-box3 {
+	
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 2 / 3; /* Вторая строка */
 }
