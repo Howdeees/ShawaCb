@@ -338,6 +338,52 @@ h2 {
 	border-radius: 15px;
 }
 
+/* Позиционирование box1 в левом верхнем углу */
+.article-box1 {
+	grid-column: 1 / 2; /* Первый столбец */
+	grid-row: 1 / 2; /* Первая строка */
+	margin: 20px;
+}
+
+/* Позиционирование box2 в правом верхнем углу */
+.article-box2 {
+	align-self: start;
+	grid-column: 2 / 3; /* Второй столбец */
+	grid-row: 1 / 2; /* Первая строка */
+}
+
+/* Позиционирование box3 в левом нижнем углу */
+.article-box3 {
+	align-self: start;
+	grid-column: 1 / 2; /* Первый столбец */
+	grid-row: 2 / 3; /* Вторая строка */
+}
+
+/* Позиционирование box4 в правом нижнем углу */
+.article-box4 {
+	align-self: start;
+	grid-column: 2 / 3; /* Второй столбец */
+	grid-row: 2 / 3; /* Вторая строка */
+}
+
+.article-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Два столбца */
+	gap: 15px; /* Расстояние между строками и колонками */
+	width: 100%; /* Занимает всю ширину категории */
+}
+
+.article-item {
+	border-radius: 10px; /* Скругление углов */
+	background-color: #333; /* Фон для контраста */
+	color: #fff; /* Цвет текста */
+	padding: 10px; /* Внутренние отступы */
+	margin: 5px; /* Внешние отступы */
+	text-align: center; /* Центрирование текста */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+	cursor: pointer; /* Указатель мыши при наведении */
+	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
+}
 .menu-section h1 {
 	position: absolute; /* Абсолютное позиционирование */
 	top: 110px; /* Середина секции */
@@ -351,10 +397,6 @@ h2 {
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Тень для контраста */
 	z-index: 10; /* Поверх других элементов */
 	text-align: center;
-}
-
-.menu-section h2 {
-	font-weight: 400; /* Жирный текст */
 }
 
 .menu-section {
@@ -372,54 +414,6 @@ h2 {
 	width: auto; /* Автоматическая ширина */
 	height: auto; /* Автоматическая высота */
 }
-
-/* Позиционирование box1 в левом верхнем углу */
-.menu-box1 {
-	grid-column: 1 / 2; /* Первый столбец */
-	grid-row: 1 / 2; /* Первая строка */
-	margin: 20px;
-}
-
-/* Позиционирование box2 в правом верхнем углу */
-.menu-box2 {
-	align-self: start;
-	grid-column: 2 / 3; /* Второй столбец */
-	grid-row: 1 / 2; /* Первая строка */
-}
-
-/* Позиционирование box3 в левом нижнем углу */
-.menu-box3 {
-	align-self: start;
-	grid-column: 1 / 2; /* Первый столбец */
-	grid-row: 2 / 3; /* Вторая строка */
-}
-
-/* Позиционирование box4 в правом нижнем углу */
-.menu-box4 {
-	align-self: start;
-	grid-column: 2 / 3; /* Второй столбец */
-	grid-row: 2 / 3; /* Вторая строка */
-}
-
-.menu-items {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Два столбца */
-	gap: 15px; /* Расстояние между строками и колонками */
-	width: 100%; /* Занимает всю ширину категории */
-}
-
-.menu-item {
-	border-radius: 10px; /* Скругление углов */
-	background-color: #333; /* Фон для контраста */
-	color: #fff; /* Цвет текста */
-	padding: 10px; /* Внутренние отступы */
-	margin: 5px; /* Внешние отступы */
-	text-align: center; /* Центрирование текста */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
-	cursor: pointer; /* Указатель мыши при наведении */
-	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
-}
-
 f .menu-item p {
 	margin: 5px 0; /* Убираем лишние отступы */
 }
