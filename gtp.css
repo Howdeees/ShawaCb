@@ -293,6 +293,18 @@ h2 {
 	color: #bbb;
 }
 
+.aside {
+	width: 18%;
+	display: inline-block;
+	float: right;
+	margin-right: auto;
+	background-color: lightgray;
+	text-align: center;
+	margin-bottom: 15px;
+	height: 100%;
+	font-size: 25px;
+}
+
 .menu-section {
 	display: grid;
 	grid-template-columns: 1fr 1fr; /* Две колонки */
