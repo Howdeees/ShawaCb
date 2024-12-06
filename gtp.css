@@ -408,6 +408,10 @@ h2 {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
 	cursor: pointer; /* Указатель мыши при наведении */
 	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
+	max-width: 320px;
+	min-width: 100px;
+	max-height: 320px;
+	min-width: 100px;
 }
 
 f .menu-item p {
