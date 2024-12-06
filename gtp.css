@@ -109,11 +109,6 @@ h2 {
 	padding: 20px;
 }
 
-.menu-container {
-	max-width: 900px;
-	margin: 0 auto;
-}
-
 .menu-rows {
 	display: flex;
 	justify-content: space-between; /* Распределение колонок */
@@ -347,6 +342,7 @@ h2 {
 
 /* Позиционирование box1 в левом верхнем углу */
 .menu-box1 {
+	align-self: start;
 	margin-top: 89px;
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 1 / 2; /* Первая строка */
@@ -362,25 +358,18 @@ h2 {
 
 /* Позиционирование box3 в левом нижнем углу */
 .menu-box3 {
+	align-self: start;
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 2 / 3; /* Вторая строка */
 }
 
 /* Позиционирование box4 в правом нижнем углу */
 .menu-box4 {
+	align-self: start;
 	grid-column: 2 / 3; /* Второй столбец */
 	grid-row: 2 / 3; /* Вторая строка */
 }
 
-/* Box-specific styles */
-.menu-box1,
-.menu-box2,
-.menu-box3,
-.menu-box4 {
-	display: flex;
-	flex-direction: column; /* Элементы в колонке */
-	align-items: center; /* Центрируем содержимое */
-}
 
 .menu-items {
 	display: grid;
@@ -388,12 +377,26 @@ h2 {
 	gap: 15px; /* Расстояние между строками и колонками */
 	width: 100%; /* Занимает всю ширину категории */
 }
+
+.menu-item {
+	border-radius: 10px; /* Скругление углов */
+	background-color: #333; /* Фон для контраста */
+	color: #fff; /* Цвет текста */
+	padding: 10px; /* Внутренние отступы */
+	margin: 5px; /* Внешние отступы */
+	text-align: center; /* Центрирование текста */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+	cursor: pointer; /* Указатель мыши при наведении */
+	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
+}
+
 f .menu-item p {
 	margin: 5px 0; /* Убираем лишние отступы */
 }
 
 .menu-item:hover {
-	transform: scale(1.45);
+	transform: scale(1.05); /* Лёгкое увеличение при наведении */
+	box-shadow: 0 6px 12px rgba(255, 85, 0, 0.3); /* Усиленная тень */
 	background-color: #444;
 }
 
