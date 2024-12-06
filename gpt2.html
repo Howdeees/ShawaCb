@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shawa Club</title>
+		<link rel="stylesheet" href="gtp2.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="menu">
+					<button class="menu-button">☰</button>
+					<a href="#" class="menu-link">Каталог</a>
+					<a href="#" class="menu-link">Контакты</a>
+				</div>
+				<div class="logo">
+					<img src="logo.png" alt="Logo" />
+					<span class="head">Shawa Club</span>
+				</div>
+				<div class="contact">
+					<a href="tel:+79501130303" class="phone">+7 (950) 113-03-03</a>
+					<button class="client-button">Корзина</button>
+				</div>
+			</div>
+		</header>
+		<main>
+			<h1 class="head">Позиции</h1>
+		<section class="menu-section">
+			<!-- Шаурма -->
+			<article class="article-sectionL">	
+			<div class="menu-box1">
+					<h2>Шаурма</h2>
+					<div class="menu-items">
+							<!-- Добавить 8 позиций -->
+							<div class="menu-item" onclick="addToCart('Шаурма Студенческая', 140)">
+									<p>Шаурма Студенческая</p>
+									<p>140 ₽</p>
+							</div>
+							<div class="menu-item" onclick="addToCart('Шаурма Классическая', 200)">
+								<p>Шаурма Классическая</p>
+								<p>200  ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Сырная', 230)">
+								<p>Шаурма Сырная</p>
+								<p>230 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Со стрипсами', 240)">
+								<p>Шаурма Со стрипсами</p>
+								<p>240 ₽</p>
+						  </div>
+						  <div class="menu-item" onclick="addToCart('Шаурма Царская', 260)">
+							  <p>Шаурма Царская</p>
+							  <p>260 ₽</p>
+					    </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Царская со стрипсами', 285)">
+								<p>Шаурма Царская со стрипсами</p>
+								<p>285 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма MAXXX', 290)">
+								<p>Шаурма MAXXX</p>
+								<p>290 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма MAXXX со стрипсами', 320)">
+								<p>Шаурма MAXXX со стрипсами</p>
+								<p>320 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Терияки', 300)">
+								<p>Шаурма Терияки</p>
+								<p>300 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Терияки с креветками', 340)">
+								<p>Шаурма Терияки с креветками</p>
+								<p>340 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Шаурма Вегетарианская', 150)">
+								<p>Шаурма Вегетарианская</p>
+								<p>155 ₽</p>
+						  </div>
+							<!-- Повторить аналогично для 7 других -->
+					</div>
+			</div>
+		</article>
+		<article class="article-sectionR">
+			<!-- Бургеры -->
+			<div class="menu-category menu-box2">
+					<h2>Бургеры</h2>
+					<div class="menu-items">
+							<!-- Добавить 8 позиций -->
+							<div class="menu-item" onclick="addToCart('Бургер', 240)">
+									<p>Бургер </p>
+									<p>240 ₽</p>
+							</div>
+							<div class="menu-item" onclick="addToCart('Чизбургер', 270)">
+								<p>Чизбургер</p>
+								<p>270 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Двойной бургер', 310)">
+								<p>Двойной бургер</p>
+								<p>310 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Двойной чизбургер', 350)">
+							  <p>Двойной чизбургер</p>
+							  <p>350 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Бигбургер', 300)">
+							  <p>Бигбургер</p>
+							  <p>300 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Двойной бигбургер', 420)">
+							  <p>Двойной бигбургер</p>
+							  <p>420 ₽</p>
+						  </div>
+							<!-- Повторить аналогично для 7 других -->
+					</div>
+			</div>
+		</article>
+		<article class="article-sectionL">
+			<!-- Закуски -->
+			<div class="menu-category menu-box3">
+					<h2>Закуски</h2>
+					<div class="menu-items">
+							<!-- Добавить 8 позиций -->
+							<div class="menu-item" onclick="addToCart('Хрустящий картофель фри', 120)">
+									<p>Хрустящий картофель фри</p>
+									<p>120 ₽</p>
+							</div>
+							<div class="menu-item" onclick="addToCart('Фирменные стрипсы', 160)">
+								<p>Фирменные стрипсы</p>
+								<p>160 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Наггетсы', 150)">
+								<p>Наггетсы</p>
+								<p>150 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Картофель фри+стрипсы', 260)">
+								<p>Картофель фри+стрипсы</p>
+								<p>260 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Картофель фри+Наггетсы', 250)">
+								<p>Картофель фри+Наггетсы</p>
+								<p>250 ₽</p>
+						  </div>
+							<div class="menu-item" onclick="addToCart('Сырные палочки', 150)">
+								<p>Сырные палочки</p>
+								<p>150 ₽</p>
+						  </div>
+							<!-- Повторить аналогично для 7 других -->
+					</div>
+			</div>
+		</article>
+		<article class="article-sectionR">
+			<div class="menu-category menu-box4">
+        <h2>Дополнительно</h2>
+        <div class="menu-items">
+            <!-- Элементы меню -->
+            <div class="menu-item" onclick="addToCart('Перец халапеньо', 30)">
+							<p>Перец халапеньо</p>
+							<p>30 ₽</p>
+						</div>
+            <div class="menu-item" onclick="addToCart('Соус на выбор', 40)">
+							<p>Соус на выбор</p>
+							<p>40 ₽</p>
+						</div>
+            <div class="menu-item" onclick="addToCart('Ломтик сыра', 30)">
+							<p>Ломтик сыра</p>
+							<p>30 ₽</p>
+						</div>
+						<div class="menu-item" onclick="addToCart('Фри', 40)">
+							<p>Фри</p>
+							<p>40 ₽</p>
+						</div>
+						<div class="menu-item" onclick="addToCart('Дополнительное мясо', 70)">
+							<p>Дополнительное мясо</p>
+							<p>70 ₽</p>
+						</div>
+						<div class="menu-item" onclick="addToCart('Сырные палочки', 70)">
+							<p>Сырные палочки</p>
+							<p>70 ₽</p>
+						</div>
+        </div>
+			</article>
+		<article>
+		<!-- Модальное окно настройки шаурмы -->
+		<div id="customization-modal" class="modal">
+			<div class="modal-content">
+				<h2 id="customization-title"></h2>
+				<p>Выберите дополнительные ингредиенты:</p>
+				<div class="customization-options">
+					<label
+						><input type="checkbox" value="Сыр (+20 ₽)" /> Сыр (+20 ₽)</label
+					>
+					<label
+						><input type="checkbox" value="Острый соус (+15 ₽)" /> Острый соус
+						(+15 ₽)</label
+					>
+					<label
+						><input type="checkbox" value="Бекон (+30 ₽)" /> Бекон (+30
+						₽)</label
+					>
+				</div>
+				<button class="modal-button" onclick="addCustomizedToCart()">
+					Добавить в корзину
+				</button>
+				<button class="modal-close" onclick="closeModal()">Закрыть</button>
+			</div>
+		</div>
+		</article>
+		</section>
+	</main>
+
+	<aside class="asid!!!!">
+	</aside>
+
+	<footer class="footer">
+  <div class="footer-container">
+    <!-- Разделы меню -->
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>ShawaClub</h3>
+        <a href="#about-us">О нас</a>
+        <a href="#blog">Блог</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+      <div class="footer-column">
+        <h3>Карьера</h3>
+        <a href="#jobs">Работа в ShawaClub</a>
+        <a href="#partner">Партнёрство</a>
+      </div>
+      <div class="footer-column">
+        <h3>Это интересно</h3>
+        <a href="#features">Наша концепция</a>
+        <a href="#master-classes">Мастер-классы</a>
+        <a href="#corporate">Корпоративные заказы</a>
+      </div>
+    </div>
+
+    <!-- Статистика -->
+    <div class="footer-stats">
+      <p><strong>156 000+</strong> заказов в этом месяце</p>
+      <p><strong>28</strong> в 5 городах</p>
+    </div>
+
+    <!-- Контакты -->
+    <div class="footer-contacts">
+      <h3>Контакты</h3>
+      <p>📧 <a href="mailto:info@shawaclub.ru">info@shawaclub.ru</a></p>
+      <p>📞 <a href="tel:+78129822727">+7 (812) 982-27-27</a></p>
+      <div class="footer-socials">
+        <a href="#ok">ОК</a>
+        <a href="#vk">VK</a>
+        <a href="#youtube">YouTube</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 ShawaClub. Все права защищены.</p>
+  </div>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
