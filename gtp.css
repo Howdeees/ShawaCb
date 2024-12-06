@@ -359,7 +359,7 @@ h2 {
 
 /* Позиционирование box1 в левом верхнем углу */
 .menu-box1 {
-	align-self: start;
+	
 	margin-top: 89px;
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 1 / 2; /* Первая строка */
