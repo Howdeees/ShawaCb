@@ -109,8 +109,6 @@ h2 {
 	padding: 20px;
 }
 
-
-
 .menu-container {
 	max-width: 900px;
 	margin: 0 auto;
@@ -220,7 +218,7 @@ h2 {
 	background-color: #333;
 	color: #fff;
 	padding: 40px 20px 20px;
-	font-family: Arial, sans-serif;
+	font-family: 'M PLUS Rounded 1c';
 }
 
 .footer-container {
@@ -313,14 +311,17 @@ h2 {
 	background-repeat: no-repeat; /* Отключаем повторение */
 	box-sizing: border-box; /* Учитываем отступы */
 	margin: 100px auto 50px; /* Центровка по горизонтали */
-  border-radius: 15px;
+	border-radius: 15px;
 }
 
 .menu-section h1 {
 	position: absolute; /* Абсолютное позиционирование */
 	top: 14%; /* Середина секции */
 	left: 50%; /* Середина по горизонтали */
-	transform: translate(-50%, -50%); /* Смещаем на половину ширины и высоты, чтобы центрировать */
+	transform: translate(
+		-50%,
+		-50%
+	); /* Смещаем на половину ширины и высоты, чтобы центрировать */
 	color: white; /* Цвет текста */
 	font-size: 48px; /* Размер текста */
 	font-weight: bold; /* Жирный текст */
@@ -361,7 +362,6 @@ h2 {
 
 /* Позиционирование box3 в левом нижнем углу */
 .menu-box3 {
-	
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 2 / 3; /* Вторая строка */
 }
@@ -373,7 +373,10 @@ h2 {
 }
 
 /* Box-specific styles */
-.menu-box1, .menu-box2, .menu-box3, .menu-box4 {
+.menu-box1,
+.menu-box2,
+.menu-box3,
+.menu-box4 {
 	display: flex;
 	flex-direction: column; /* Элементы в колонке */
 	align-items: center; /* Центрируем содержимое */
@@ -385,9 +388,7 @@ h2 {
 	gap: 15px; /* Расстояние между строками и колонками */
 	width: 100%; /* Занимает всю ширину категории */
 }
-f
-
-.menu-item p {
+f .menu-item p {
 	margin: 5px 0; /* Убираем лишние отступы */
 }
 
@@ -396,21 +397,19 @@ f
 	background-color: #444;
 }
 
-
 /* Для адаптивности */
 @media (max-width: 768px) {
 	.menu-box1,
 	.menu-box2 {
-			float: none;
-			width: 100%; /* На мобильных категория занимает весь экран */
-			text-align: center;
+		float: none;
+		width: 100%; /* На мобильных категория занимает весь экран */
+		text-align: center;
 	}
 	.menu-box3 {
-			margin-top: 40px;
+		margin-top: 40px;
 	}
 
 	.menu-items {
-			grid-template-columns: repeat(1, 1fr); /* Один столбец */
+		grid-template-columns: repeat(1, 1fr); /* Один столбец */
 	}
 }
-
