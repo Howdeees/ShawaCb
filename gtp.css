@@ -412,7 +412,7 @@ f .menu-item p {
 
 .menu-item:hover {
 	transform: scale(1.05); /* Лёгкое увеличение при наведении */
-	box-shadow: 0 6px 12px rgba(248, 66, 10, 0.747); /* Усиленная тень */
+	box-shadow: 0 6px 12px rgba(248, 66, 10, 0.747);
 	background-color: #444;
 }
 
