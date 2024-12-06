@@ -218,6 +218,7 @@ h2 {
 	color: #fff;
 	padding: 40px 20px 20px;
 	font-family: 'M PLUS Rounded 1c';
+	font-weight: 300;
 }
 
 .footer-container {
@@ -329,17 +330,20 @@ h2 {
 
 .menu-section h1 {
 	position: absolute; /* Абсолютное позиционирование */
-	top: 14%; /* Середина секции */
+	top: 110px; /* Середина секции */
 	left: 50%; /* Середина по горизонтали */
 	transform: translate(
 		-50%,
 		-50%
 	); /* Смещаем на половину ширины и высоты, чтобы центрировать */
 	font-size: 48px; /* Размер текста */
-	font-weight: bold; /* Жирный текст */
+	font-weight: 400; /* Жирный текст */
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Тень для контраста */
 	z-index: 10; /* Поверх других элементов */
 	text-align: center;
+}
+.menu-section h2 {
+	font-weight: 400; /* Жирный текст */
 }
 
 .menu-category {
@@ -348,7 +352,7 @@ h2 {
 	justify-content: flex-start; /* Выравнивание содержимого сверху */
 	align-items: center; /* Центрирование содержимого по горизонтали */
 	background-color: rgba(51, 51, 51, 0.8); /* Фон для box */
-	border: 2px solid rgba(248, 66, 10, 0.747); /* Обводка с динамическими размерами */
+	border: 1px solid rgba(248, 66, 10, 0.747); /* Обводка с динамическими размерами */
 	border-radius: 10px; /* Скругление углов (опционально) */
 	padding: 10px; /* Внутренние отступы */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
@@ -359,7 +363,6 @@ h2 {
 
 /* Позиционирование box1 в левом верхнем углу */
 .menu-box1 {
-	
 	margin-top: 89px;
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 1 / 2; /* Первая строка */
