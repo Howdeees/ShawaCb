@@ -97,85 +97,6 @@ body {
 	background-color: #e68a00;
 }
 
-h1,
-h2 {
-	color: rgba(248, 66, 10, 0.747);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-	text-align: center;
-}
-
-.main-content {
-	padding: 20px;
-}
-
-.menu-container {
-	max-width: 900px;
-	margin: 0 auto;
-}
-
-.menu-rows {
-	display: flex;
-	justify-content: space-between; /* Распределение колонок */
-	align-items: flex-start; /* Выравнивание по верху */
-	margin-bottom: 30px;
-}
-
-.menu-column {
-	width: 45%; /* Ширина колонок */
-	text-align: left;
-}
-
-.menu-column h2 {
-	font-size: 24px;
-	color: #f90;
-	margin-bottom: 10px;
-}
-
-.menu-column ul {
-	list-style: none;
-	padding: 0;
-}
-
-.menu-column li {
-	font-size: 18px;
-	margin-bottom: 10px;
-}
-
-/* Центрированный блок для закусок */
-.menu-snacks {
-	text-align: center;
-	margin-top: 20px;
-}
-
-.menu-snacks h2 {
-	font-size: 24px;
-	color: #f90;
-	margin-bottom: 10px;
-}
-
-.menu-snacks ul {
-	list-style: none;
-	padding: 0;
-}
-
-.menu-snacks li {
-	font-size: 18px;
-	margin-bottom: 10px;
-}
-
-/* Адаптивность для узких экранов */
-@media (max-width: 768px) {
-	.menu-rows {
-		flex-direction: column; /* Колонки переходят в вертикальное расположение */
-		align-items: center;
-	}
-
-	.menu-column {
-		width: 100%;
-		margin-bottom: 20px;
-	}
-}
-
 /* Модальное окно */
 .modal {
 	position: fixed;
@@ -350,6 +271,7 @@ h2 {
 	align-self: start;
 	grid-column: 2 / 3; /* Второй столбец */
 	grid-row: 1 / 2; /* Первая строка */
+	margin: 20px;
 }
 
 /* Позиционирование box3 в левом нижнем углу */
@@ -357,6 +279,7 @@ h2 {
 	align-self: start;
 	grid-column: 1 / 2; /* Первый столбец */
 	grid-row: 2 / 3; /* Вторая строка */
+	margin: 20px;
 }
 
 /* Позиционирование box4 в правом нижнем углу */
@@ -364,6 +287,7 @@ h2 {
 	align-self: start;
 	grid-column: 2 / 3; /* Второй столбец */
 	grid-row: 2 / 3; /* Вторая строка */
+	margin: 20px;
 }
 
 .article-items {
@@ -384,18 +308,11 @@ h2 {
 	cursor: pointer; /* Указатель мыши при наведении */
 	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
 }
-.menu-section h1 {
-	position: absolute; /* Абсолютное позиционирование */
-	top: 110px; /* Середина секции */
-	left: 50%; /* Середина по горизонтали */
-	transform: translate(
-		-50%,
-		-50%
-	); /* Смещаем на половину ширины и высоты, чтобы центрировать */
-	font-size: 48px; /* Размер текста */
+.menu-section h1,
+h2 {
+	margin: 0;
+	font-size: 38px; /* Размер текста */
 	font-weight: 400; /* Жирный текст */
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Тень для контраста */
-	z-index: 10; /* Поверх других элементов */
 	text-align: center;
 }
 
@@ -409,34 +326,11 @@ h2 {
 	box-sizing: border-box; /* Учитываем отступы */
 	border-radius: 15px; /* Скругление углов (опционально) */
 	padding: 1%; /* Внутренние отступы */
-	margin: 1%;
+	margin: 2%;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
 	width: auto; /* Автоматическая ширина */
 	height: auto; /* Автоматическая высота */
-}
-f .menu-item p {
-	margin: 5px 0; /* Убираем лишние отступы */
-}
-
-.menu-item:hover {
-	transform: scale(1.05); /* Лёгкое увеличение при наведении */
-	box-shadow: 0 6px 12px rgba(248, 66, 10, 0.747);
-	background-color: #444;
-}
-
-/* Для адаптивности */
-@media (max-width: 768px) {
-	.menu-box1,
-	.menu-box2 {
-		float: none;
-		width: 100%; /* На мобильных категория занимает весь экран */
-		text-align: center;
-	}
-	.menu-box3 {
-		margin-top: 40px;
-	}
-
-	.menu-items {
-		grid-template-columns: repeat(1, 1fr); /* Один столбец */
-	}
+	margin-top: 7%;
+	color: rgba(248, 66, 10, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
