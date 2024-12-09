@@ -334,3 +334,85 @@ h2 {
 	color: rgba(248, 66, 10, 0.747);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
+
+/* Скрываем попап по умолчанию */
+.popup-cart {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+	display: none; /* Скрываем попап */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+/* Контент внутри попапа */
+.popup-content {
+	background-color: #fff;
+	width: 80%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+/* Кнопка закрытия */
+.close-button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #f90;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.close-button:hover {
+	background-color: #e08900;
+}
+
+/* Скрываем попап по умолчанию */
+.menu-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+	display: none; /* Попап изначально скрыт */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+/* Содержимое попапа */
+.menu-popup .popup-content {
+	background-color: #fff;
+	width: 80%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+/* Кнопка закрытия */
+.menu-popup .close-button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #f90;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.menu-popup .close-button:hover {
+	background-color: #e08900;
+}
