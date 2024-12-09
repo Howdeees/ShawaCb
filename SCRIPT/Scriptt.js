@@ -45,43 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
         menuPopup.style.display = "none"; // Закрываем попап
     });
 
-    // Открытие попапа корзины
+    // Открытие корзины в новой вкладке
     cartButton.addEventListener("click", () => {
-        renderCartItems(); // Обновляем содержимое корзины
-        popupCart.style.display = "flex"; // Показываем попап корзины
+        // Сохраняем текущие данные корзины в localStorage
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        // Открываем новую вкладку с корзиной
+        window.open("cart.html", "_blank");
     });
 
-    // Закрытие попапа корзины
-    closePopupCart.addEventListener("click", () => {
-        popupCart.style.display = "none"; // Скрываем попап корзины
-    });
-
-    // Функция для отображения элементов в корзине
-    function renderCartItems() {
-        cartItemsContainer.innerHTML = ""; // Очищаем содержимое корзины
-        if (cartItems.length === 0) {
-            cartItemsContainer.innerHTML = "<p>Ваша корзина пуста.</p>";
-        } else {
-            cartItems.forEach((item, index) => {
-                const cartItem = document.createElement("div");
-                cartItem.classList.add("cart-item");
-                cartItem.innerHTML = `
-                    <p>${item.name}</p>
-                    <p>${item.price} ₽</p>
-                    <button class="remove-button" data-index="${index}">Удалить</button>
-                `;
-                cartItemsContainer.appendChild(cartItem);
-            });
-
-            // Удаление элементов из корзины
-            const removeButtons = document.querySelectorAll(".remove-button");
-            removeButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    const index = button.getAttribute("data-index");
-                    cartItems.splice(index, 1); // Удаляем товар из массива
-                    renderCartItems(); // Обновляем корзину
-                });
-            });
-        }
-    }
 });
