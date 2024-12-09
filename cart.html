@@ -4,37 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-        }
-
-        .cart-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cart-item p {
-            margin: 0;
-        }
-
-        .cart-total {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-
-        .empty-cart {
-            color: #999;
-            font-style: italic;
-        }
-    </style>
+    <link rel="stylesheet" href="Stylecart.css" />
 </head>
 <body>
     <h1>Ваша корзина</h1>
@@ -42,30 +12,6 @@
         <!-- Список товаров будет загружен сюда -->
     </div>
     <div id="cartTotal" class="cart-total"></div>
-    <script>
-        // Загружаем данные корзины из localStorage
-        const cartItemsContainer = document.getElementById("cartItems");
-        const cartTotalElement = document.getElementById("cartTotal");
-
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-        if (cartItems.length === 0) {
-            cartItemsContainer.innerHTML = '<p class="empty-cart">Ваша корзина пуста.</p>';
-        } else {
-            let total = 0;
-            cartItems.forEach(item => {
-                const cartItem = document.createElement("div");
-                cartItem.classList.add("cart-item");
-                cartItem.innerHTML = `
-                    <p>${item.name}</p>
-                    <p>${item.price} ₽</p>
-                `;
-                total += item.price;
-                cartItemsContainer.appendChild(cartItem);
-            });
-
-            cartTotalElement.textContent = `Итого: ${total} ₽`;
-        }
-    </script>
-</body>
+    <script src="Scriptcart.js"></script>
+  </body>
 </html>
