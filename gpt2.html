@@ -20,7 +20,7 @@
 				</div>
 				<div class="contact">
 					<a href="tel:+79501130303" class="phone">+7 (950) 113-03-03</a>
-					<button class="client-button">Корзина</button>
+					<button class="client-button" id="cartButton">Корзина</button>
 				</div>
 			</div>
 		</header>
@@ -33,19 +33,19 @@
 					<h2>Шаурма</h2>
 					<div class="article-items">
 							<!-- Добавить 8 позиций -->
-							<div class="article-item" onclick="addToCart('Шаурма Студенческая', 140)">
+							<div class="article-item" onclick="openPopup('Шаурма Студенческая', 140)">
 									<p>Шаурма Студенческая</p>
 									<p>140 ₽</p>
 							</div>
-							<div class="article-item" onclick="addToCart('Шаурма Классическая', 200)">
+							<div class="article-item" data-id="item2" onclick="openPopup('Шаурма Классическая', 200)">
 								<p>Шаурма Классическая</p>
 								<p>200  ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Шаурма Сырная', 230)">
+							<div class="article-item" data-id="SChe" onclick="openPopup('Шаурма Сырная', 230)">
 								<p>Шаурма Сырная</p>
 								<p>230 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Шаурма Со стрипсами', 240)">
+							<div class="article-item" data-id="SStr" onclick="openPopup('Шаурма Со стрипсами', 240)">
 								<p>Шаурма Со стрипсами</p>
 								<p>240 ₽</p>
 						  </div>
@@ -87,15 +87,15 @@
 					<h2>Бургеры</h2>
 					<div class="article-items">
 							<!-- Добавить 8 позиций -->
-							<div class="article-item" onclick="addToCart('Бургер', 240)">
+							<div class="article-item" data-id="Burger" onclick="addToCart('Бургер', 240)">
 									<p>Бургер </p>
 									<p>240 ₽</p>
 							</div>
-							<div class="article-item" onclick="addToCart('Чизбургер', 270)">
+							<div class="article-item" data-id="BCHeeseBurg" onclick="addToCart('Чизбургер', 270)">
 								<p>Чизбургер</p>
 								<p>270 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Двойной бургер', 310)">
+							<div class="article-item" data-id="B2Burger" onclick="addToCart('Двойной бургер', 310)">
 								<p>Двойной бургер</p>
 								<p>310 ₽</p>
 						  </div>
@@ -257,6 +257,27 @@
     <p>© 2024 ShawaClub. Все права защищены.</p>
   </div>
 </footer>
-<script src="scripts.js"></script>
+
+<!-- Попап корзины -->
+<div class="popup-cart" id="popupCart">
+	<div class="popup-content">
+			<h2>Корзина</h2>
+			<div class="cart-items" id="cartItems">
+					<!-- Здесь будут отображаться выбранные товары -->
+			</div>
+			<button class="close-button" id="closePopup">Закрыть</button>
+	</div>
+</div>
+
+<!-- Попап для меню -->
+<div class="menu-popup" id="menuPopup" style="display: none;">
+	<div class="popup-content">
+			<h2 id="popupTitle">Детали элемента меню</h2>
+			<p id="popupDescription">Описание элемента появится здесь.</p>
+			<button class="add-to-cart-button" id="addToCartButton">Добавить в корзину</button>
+			<button class="close-button" id="closeMenuPopup">Закрыть</button>
+	</div>
+</div>
+<script src="SCRIPT/Scriptt.js"></script>
 </body>
 </html>
