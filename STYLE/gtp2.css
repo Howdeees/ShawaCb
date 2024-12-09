@@ -3,21 +3,24 @@
 body {
 	margin: 0;
 	font-family: 'M PLUS Rounded 1c';
-	background-color: #222222fb;
+	background-color: #222;
 	color: #fff;
 }
 
 .header {
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	z-index: 1000;
 	background-color: #333;
 	color: white;
-	padding: 5px 0;
+	padding: 10px 0;
 	font-weight: 700;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	margin-bottom: 2%;
+	margin-bottom: 0; /* Минимальные отступы после header */
 }
+
 .head {
 	font-family: 'Algerian';
 	font-weight: 1000;
@@ -30,6 +33,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -129,211 +133,6 @@ body {
 	background-color: #e68a00;
 }
 
-.aside {
-	width: 18%;
-	display: inline-block;
-	float: right;
-	margin-right: auto;
-	background-color: lightgray;
-	text-align: center;
-	margin-bottom: 15px;
-	height: 100%;
-	font-size: 25px;
-}
-
-.article-sectionR {
-	display: inline-block;
-	align-items: right;
-	gap: 20px; /* Отступы между элементами */
-	height: 80%; /* Занимает 70% высоты окна */
-	width: 44%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	padding: 1%; /* Внутренние отступы */
-	margin: 2%; /* Центровка по горизонтали */
-	border-radius: 15px;
-}
-
-.article-sectionL {
-	display: inline-block;
-	align-items: left;
-	gap: 20px; /* Отступы между элементами */
-	height: 80%; /* Занимает 70% высоты окна */
-	width: 43%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	padding: 1%; /* Внутренние отступы */
-	margin: 2%; /* Центровка по горизонтали */
-	border-radius: 15px;
-}
-
-/* Позиционирование box1 в левом верхнем углу */
-.article-box1 {
-	grid-column: 1 / 2; /* Первый столбец */
-	grid-row: 1 / 2; /* Первая строка */
-	margin: 20px;
-}
-
-/* Позиционирование box2 в правом верхнем углу */
-.article-box2 {
-	align-self: start;
-	grid-column: 2 / 3; /* Второй столбец */
-	grid-row: 1 / 2; /* Первая строка */
-	margin: 20px;
-}
-
-/* Позиционирование box3 в левом нижнем углу */
-.article-box3 {
-	align-self: start;
-	grid-column: 1 / 2; /* Первый столбец */
-	grid-row: 2 / 3; /* Вторая строка */
-	margin: 20px;
-}
-
-/* Позиционирование box4 в правом нижнем углу */
-.article-box4 {
-	align-self: start;
-	grid-column: 2 / 3; /* Второй столбец */
-	grid-row: 2 / 3; /* Вторая строка */
-	margin: 20px;
-}
-
-.article-items {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Два столбца */
-	gap: 15px; /* Расстояние между строками и колонками */
-}
-
-.article-item {
-	border-radius: 10px; /* Скругление углов */
-	background-color: #333; /* Фон для контраста */
-	color: #fff; /* Цвет текста */
-	padding: 10px; /* Внутренние отступы */
-	margin: 5px; /* Внешние отступы */
-	text-align: center; /* Центрирование текста */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
-	cursor: pointer; /* Указатель мыши при наведении */
-	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
-}
-
-f .article-item p {
-	margin: 0; /* Убираем лишние отступы */
-}
-
-.article-item:hover {
-	transform: scale(1.05); /* Лёгкое увеличение при наведении */
-	box-shadow: 0 6px 12px rgba(248, 66, 10, 0.747);
-	background-color: #444;
-}
-
-.menu-section {
-	display: inline-block; /* Flexbox для внутренних элементов */
-	align-items: center; /* Центрирование содержимого по горизонтали */
-	background-image: url(images1/greyback.jpg); /* Фон для секции */
-	background-size: cover; /* Растянуть фон по размеру секции */
-	background-position: center; /* Центрируем фон */
-	background-repeat: no-repeat; /* Отключаем повторение */
-	box-sizing: border-box; /* Учитываем отступы */
-	border-radius: 15px; /* Скругление углов (опционально) */
-	padding: 0%; /* Внутренние отступы */
-	margin: 2%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	width: auto; /* Автоматическая ширина */
-	height: auto; /* Автоматическая высота */
-	margin-top: 100px;
-	color: rgba(248, 66, 10, 0.747);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.menu-section h1,
-h2 {
-	margin: 2% 0 0;
-	font-size: 38px; /* Размер текста */
-	font-weight: 400; /* Жирный текст */
-	text-align: center;
-}
-
-/* Скрываем попап по умолчанию */
-.popup-cart {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-	display: none; /* Скрываем попап */
-	justify-content: center;
-	align-items: center;
-	z-index: 1000;
-}
-
-/* Контент внутри попапа */
-.popup-content {
-	background-color: #fff;
-	width: 80%;
-	max-width: 400px;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	text-align: center;
-}
-
-/* Кнопка закрытия */
-.close-button {
-	margin-top: 10px;
-	padding: 10px 20px;
-	background-color: #f90;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-}
-
-.close-button:hover {
-	background-color: #e08900;
-}
-
-/* Скрываем попап по умолчанию */
-.menu-popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-	display: none; /* Попап изначально скрыт */
-	justify-content: center;
-	align-items: center;
-	z-index: 1000;
-}
-
-/* Содержимое попапа */
-.menu-popup .popup-content {
-	background-color: #fff;
-	width: 80%;
-	max-width: 400px;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	text-align: center;
-}
-
-/* Кнопка закрытия */
-.menu-popup .close-button {
-	margin-top: 10px;
-	padding: 10px 20px;
-	background-color: #f90;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-}
-
-.menu-popup .close-button:hover {
-	background-color: #e08900;
-}
 /* Общий стиль футера */
 .footer {
 	background-color: #333;
@@ -420,4 +219,209 @@ h2 {
 	padding-top: 10px;
 	font-size: 14px;
 	color: #bbb;
+}
+
+.aside {
+	width: 18%;
+	display: inline-block;
+	float: right;
+	margin-right: auto;
+	background-color: lightgray;
+	text-align: center;
+	margin-bottom: 15px;
+	height: 100%;
+	font-size: 25px;
+}
+
+.article-sectionR {
+	display: inline-block;
+	align-items: right;
+	gap: 20px; /* Отступы между элементами */
+	height: 80%; /* Занимает 70% высоты окна */
+	width: 43%; /* На всю ширину окна */
+	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	padding: 1%; /* Внутренние отступы */
+	margin: 2%; /* Центровка по горизонтали */
+	border-radius: 15px;
+}
+
+.article-sectionL {
+	display: inline-block;
+	align-items: left;
+	gap: 20px; /* Отступы между элементами */
+	height: 80%; /* Занимает 70% высоты окна */
+	width: 43%; /* На всю ширину окна */
+	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	padding: 1%; /* Внутренние отступы */
+	margin: 2%; /* Центровка по горизонтали */
+	border-radius: 15px;
+}
+
+/* Позиционирование box1 в левом верхнем углу */
+.article-box1 {
+	grid-column: 1 / 2; /* Первый столбец */
+	grid-row: 1 / 2; /* Первая строка */
+	margin: 20px;
+}
+
+/* Позиционирование box2 в правом верхнем углу */
+.article-box2 {
+	align-self: start;
+	grid-column: 2 / 3; /* Второй столбец */
+	grid-row: 1 / 2; /* Первая строка */
+	margin: 20px;
+}
+
+/* Позиционирование box3 в левом нижнем углу */
+.article-box3 {
+	align-self: start;
+	grid-column: 1 / 2; /* Первый столбец */
+	grid-row: 2 / 3; /* Вторая строка */
+	margin: 20px;
+}
+
+/* Позиционирование box4 в правом нижнем углу */
+.article-box4 {
+	align-self: start;
+	grid-column: 2 / 3; /* Второй столбец */
+	grid-row: 2 / 3; /* Вторая строка */
+	margin: 20px;
+}
+
+.article-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Два столбца */
+	gap: 15px; /* Расстояние между строками и колонками */
+	width: 100%; /* Занимает всю ширину категории */
+}
+
+.article-item {
+	border-radius: 10px; /* Скругление углов */
+	background-color: #333; /* Фон для контраста */
+	color: #fff; /* Цвет текста */
+	padding: 10px; /* Внутренние отступы */
+	margin: 5px; /* Внешние отступы */
+	text-align: center; /* Центрирование текста */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+	cursor: pointer; /* Указатель мыши при наведении */
+	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
+}
+.menu-section h1,
+h2 {
+	margin: 0;
+	font-size: 38px; /* Размер текста */
+	font-weight: 400; /* Жирный текст */
+	text-align: center;
+}
+f .article-item p {
+	margin: 5px 0; /* Убираем лишние отступы */
+}
+
+.article-item:hover {
+	transform: scale(1.05); /* Лёгкое увеличение при наведении */
+	box-shadow: 0 6px 12px rgba(248, 66, 10, 0.747);
+	background-color: #444;
+}
+
+.menu-section {
+	display: inline-block; /* Flexbox для внутренних элементов */
+	align-items: center; /* Центрирование содержимого по горизонтали */
+	background-image: url(images1/FOB.jpg); /* Фон для секции */
+	background-size: cover; /* Растянуть фон по размеру секции */
+	background-position: center; /* Центрируем фон */
+	background-repeat: no-repeat; /* Отключаем повторение */
+	box-sizing: border-box; /* Учитываем отступы */
+	border-radius: 15px; /* Скругление углов (опционально) */
+	padding: 1%; /* Внутренние отступы */
+	margin: 2%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	width: auto; /* Автоматическая ширина */
+	height: auto; /* Автоматическая высота */
+	margin-top: 7%;
+	color: rgba(248, 66, 10, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Скрываем попап по умолчанию */
+.popup-cart {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+	display: none; /* Скрываем попап */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+/* Контент внутри попапа */
+.popup-content {
+	background-color: #fff;
+	width: 80%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+/* Кнопка закрытия */
+.close-button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #f90;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.close-button:hover {
+	background-color: #e08900;
+}
+
+/* Скрываем попап по умолчанию */
+.menu-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+	display: none; /* Попап изначально скрыт */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+/* Содержимое попапа */
+.menu-popup .popup-content {
+	background-color: #fff;
+	width: 80%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+/* Кнопка закрытия */
+.menu-popup .close-button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #f90;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.menu-popup .close-button:hover {
+	background-color: #e08900;
 }
