@@ -224,7 +224,7 @@ body {
 .aside {
 	width: 18%;
 	display: inline-block;
-	float: right;
+	/*float: right; */
 	margin-right: auto;
 	background-color: lightgray;
 	text-align: center;
