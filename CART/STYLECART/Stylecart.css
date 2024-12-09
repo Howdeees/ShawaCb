@@ -1,29 +1,226 @@
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,regular,500,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700);
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 0;
+	margin: 0;
+	font-family: 'M PLUS Rounded 1c';
+	background-color: #222222fb;
+	color: #fff;
+}
+/* header */
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	background-color: #333;
+	color: white;
+	padding: 5px 0;
+	font-weight: 700;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	margin-bottom: 2%;
+}
+.head {
+	font-family: 'Algerian';
+	font-weight: 1000;
+	font-size: 50px;
+	color: rgba(248, 66, 10, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+}
+
+.menu-button {
+	background: none;
+	border: none;
+	color: rgb(255, 254, 254);
+	font-size: 20px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.menu-link {
+	color: white;
+	text-decoration: none;
+	margin-right: 15px;
+	font-size: 14px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	height: 40px;
+	margin-right: 10px;
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+}
+
+.phone {
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	margin-right: 20px;
+}
+
+.client-button {
+	background-color: rgba(248, 66, 10, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	border: none;
+	padding: 8px 15px;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 14px;
+	font-family: 'M PLUS Rounded 1c';
+}
+
+.client-button:hover {
+	background-color: #e68a00;
+}
+/* header */
+
+.cart-section {
+	display: inline-block; /* Flexbox для внутренних элементов */
+	align-items: center; /* Центрирование содержимого по горизонтали */
+	background-image: url(https://s3.stroi-news.ru/img/chernaya-shtukaturka-tekstura-krasivo-19.jpg); /* Фон для секции */
+	background-size: cover; /* Растянуть фон по размеру секции */
+	background-position: center; /* Центрируем фон */
+	background-repeat: no-repeat; /* Отключаем повторение */
+	box-sizing: border-box; /* Учитываем отступы */
+	border-radius: 15px; /* Скругление углов (опционально) */
+	padding: 0%; /* Внутренние отступы */
+	margin: 2%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	width: auto; /* Автоматическая ширина */
+	height: auto; /* Автоматическая высота */
+	margin-top: 100px;
+	color: rgba(248, 66, 10, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .cart-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .cart-item p {
-  margin: 0;
+	margin: 0;
 }
 
 .cart-total {
-  margin-top: 20px;
-  font-weight: bold;
+	margin-top: 20px;
+	font-weight: bold;
 }
 
 .empty-cart {
-  color: #999;
-  font-style: italic;
+	color: #999;
+	font-style: italic;
+}
+
+/* Общий стиль футера */
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding: 40px 20px 20px;
+	font-family: 'M PLUS Rounded 1c';
+	font-weight: 300;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Разделы меню */
+.footer-columns {
+	display: flex;
+	gap: 20px;
+}
+
+.footer-column h3 {
+	color: rgba(248, 66, 10, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	margin-bottom: 10px;
+}
+
+.footer-column a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+	text-decoration: underline;
+}
+
+/* Статистика */
+.footer-stats {
+	flex: 1;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.footer-stats p {
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+/* Контакты */
+.footer-contacts h3 {
+	color: rgba(248, 66, 10, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.footer-contacts a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer-contacts a:hover {
+	text-decoration: underline;
+}
+
+.footer-socials {
+	margin-top: 10px;
+}
+
+.footer-socials a {
+	margin-right: 10px;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+	text-align: center;
+	margin-top: 20px;
+	border-top: 1px solid #444;
+	padding-top: 10px;
+	font-size: 14px;
+	color: #bbb;
 }
