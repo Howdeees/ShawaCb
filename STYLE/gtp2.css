@@ -328,7 +328,7 @@ f .article-item p {
 .menu-section {
 	display: inline-block; /* Flexbox для внутренних элементов */
 	align-items: center; /* Центрирование содержимого по горизонтали */
-	background-image: url(images1/FOB.jpg); /* Фон для секции */
+	background-image: url(FOB.jpg); /* Фон для секции */
 	background-size: cover; /* Растянуть фон по размеру секции */
 	background-position: center; /* Центрируем фон */
 	background-repeat: no-repeat; /* Отключаем повторение */
