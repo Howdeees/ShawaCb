@@ -21,7 +21,9 @@
 				</div>
 				<div class="contact">
 					<a href="tel:+79501130303" class="phone">+7 (950) 113-03-03</a>
-					<button class="client-button" id="cartButton">Корзина</button>
+					<div id="cartItems">
+						<button class="client-button" id="cartButton" onclick="location.href='/cart.html';">Корзина</button>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -34,16 +36,16 @@
 					<h2>Шаурма</h2>
 					<div class="article-items">
 							<div class="article-item" onclick="openPopup('Студенческая', 140)">
-									<h3>Студенческая</h3>
-									<img src="../images1/stud.jpg"/>
-									<p>140 ₽</p>
+								<h3>Студенческая</h3>
+								<img src="../images1/stud.jpg"/>
+								<p>140 ₽</p>
 							</div>
-							<div class="article-item" data-id="item2" onclick="openPopup('Классическая', 200)">
+							<div class="article-item" onclick="openPopup('Классическая', 200)">
 								<h3>Классическая</h3>
 								<img src="../images1/stud.jpg"/>
-								<p>230 ₽</p>
+								<p>200 ₽</p>
 						  </div>
-							<div class="article-item" data-id="SChe" onclick="openPopup('Сырная', 230)">
+							<div class="article-item" onclick="openPopup('Сырная', 230)">
 								<h3>Сырная</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>230 ₽</p>
@@ -53,75 +55,74 @@
 								<img src="../images1/stud.jpg"/>
 								<p>240 ₽</p>
 						  </div>
-						  <div class="article-item" onclick="addToCart('Царская', 260)">
+						  <div class="article-item" onclick="openPopup('Царская', 260)">
 							  <h3>Царская</h3>
 							  <img src="../images1/stud.jpg"/>
 								<p>260 ₽</p>
 					    </div>
-							<div class="article-item" onclick="addToCart('Царская со стрипсами', 285)">
+							<div class="article-item" onclick="openPopup('Царская со стрипсами', 285)">
 								<h3>Царская со стрипсами</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>285 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('MAXXX', 290)">
+							<div class="article-item" onclick="openPopup('MAXXX', 290)">
 								<h3>MAXXX</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>290 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('MAXXX со стрипсами', 320)">
+							<div class="article-item" onclick="openPopup('MAXXX со стрипсами', 320)">
 								<h3>MAXXX со стрипсами</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>320 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Терияки', 300)">
+							<div class="article-item" onclick="openPopup('Терияки', 300)">
 								<h3>Терияки</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>300 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Терияки с креветками', 340)">
+							<div class="article-item" onclick="openPopup('Терияки с креветками', 340)">
 								<h3>Терияки с креветками</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>340 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Вегетарианская', 150)">
+							<div class="article-item" onclick="openPopup('Вегетарианская', 150)">
 								<h3>Вегетарианская</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>155 ₽</p>
 						  </div>
 					</div>
-			
 		</article>
 		<article class="article-sectionR">
 			<!-- Бургеры -->
 			
 					<h2>Бургеры</h2>
 					<div class="article-items">
-							<div class="article-item" data-id="Burger" onclick="addToCart('Бургер', 240)">
+							<div class="article-item" onclick="openPopup('Бургер', 240)">
 									<h3>Бургер </h3>
 									<img src="../images1/stud.jpg"/>
 								<p>240 ₽</p>
 							</div>
-							<div class="article-item" data-id="BCHeeseBurg" onclick="addToCart('Чизбургер', 270)">
+							<div class="article-item" onclick="openPopup('Чизбургер', 270)">
 								<h3>Чизбургер</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>270 ₽</p>
 						  </div>
-							<div class="article-item" data-id="B2Burger" onclick="addToCart('Двойной бургер', 310)">
+							<div class="article-item" onclick="openPopup('Двойной бургер', 310)">
 								<h3>Двойной бургер</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>310 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Двойной чизбургер', 350)">
+							<div class="article-item" onclick="openPopup('Двойной чизбургер', 350)">
 							  <h3>Двойной чизбургер</h3>
 							  <img src="../images1/stud.jpg"/>
 								<p>350 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Бигбургер', 300)">
+							<div class="article-item" onclick="openPopup('Бигбургер', 300)">
 							  <h3>Бигбургер</h3>
 							  <img src="../images1/stud.jpg"/>
 								<p>300 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Двойной бигбургер', 420)">
+							<div class="article-item" onclick="openPopup('Двойной бигбургер', 420)">
 							  <h3>Двойной бигбургер</h3>
 							  <img src="../images1/stud.jpg"/>
 								<p>420 ₽</p>
@@ -134,32 +135,32 @@
 			
 					<h2>Закуски</h2>
 					<div class="article-items">
-							<div class="article-item" onclick="addToCart('Хрустящий картофель фри', 120)">
+							<div class="article-item" onclick="openPopup('Хрустящий картофель фри', 120)">
 									<h3>Хрустящий фри</h3>
 									<img src="../images1/stud.jpg"/>
 								<p>120 ₽</p>
 							</div>
-							<div class="article-item" onclick="addToCart('Фирменные стрипсы', 160)">
+							<div class="article-item" onclick="openPopup('Фирменные стрипсы', 160)">
 								<h3>Фирменные стрипсы</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>160 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Наггетсы', 150)">
+							<div class="article-item" onclick="openPopup('Наггетсы', 150)">
 								<h3>Наггетсы</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>150 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Картофель фри+стрипсы', 260)">
+							<div class="article-item" onclick="openPopup('Картофель фри+стрипсы', 260)">
 								<h3>Фри + стрипсы</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>260 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Картофель фри+Наггетсы', 250)">
+							<div class="article-item" onclick="openPopup('Картофель фри+Наггетсы', 250)">
 								<h3>Фри + Наггетсы</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>250 ₽</p>
 						  </div>
-							<div class="article-item" onclick="addToCart('Сырные палочки', 150)">
+							<div class="article-item" onclick="openPopup('Сырные палочки', 150)">
 								<h3>Сырные палочки</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>150 ₽</p>
@@ -172,35 +173,35 @@
 			<!-- Допы -->
         <h2>Дополнительно</h2>
         <div class="article-items">
-            <div class="article-item" onclick="addToCart('Перец халапеньо', 30)">
+            <div class="article-item" onclick="openPopup('Перец халапеньо', 30)">
 							<h3>Перец халапеньо</h3>
 							<img src="../images1/stud.jpg"/>
-								<p>30 ₽</p>
+							<p>30 ₽</p>
 						</div>
-            <div class="article-item" onclick="addToCart('Соус на выбор', 40)">
+            <div class="article-item" onclick="openPopup('Соус на выбор', 40)">
 							<h3>Соус на выбор</h3>
 							<img src="../images1/stud.jpg"/>
-								<p>40 ₽</p>
+							<p>40 ₽</p>
 						</div>
-            <div class="article-item" onclick="addToCart('Ломтик сыра', 30)">
+            <div class="article-item" onclick="openPopup('Ломтик сыра', 30)">
 							<h3>Ломтик сыра</h3>
 							<img src="../images1/stud.jpg"/>
-								<p>30 ₽</p>
+							<p>30 ₽</p>
 						</div>
-						<div class="article-item" onclick="addToCart('Фри', 40)">
+						<div class="article-item" onclick="openPopup('Фри', 40)">
 							<h3>Фри</h3>
 							<img src="../images1/stud.jpg"/>
-								<p>40 ₽</p>
+							<p>40 ₽</p>
 						</div>
-						<div class="article-item" onclick="addToCart('Дополнительное мясо', 70)">
+						<div class="article-item" onclick="openPopup('Дополнительное мясо', 70)">
 							<h3>Дополнительное мясо</h3>
 							<img src="../images1/stud.jpg"/>
-								<p>70 ₽</p>
+							<p>70 ₽</p>
 						</div>
-						<div class="article-item" onclick="addToCart('Сырные палочки', 70)">
+						<div class="article-item" onclick="openPopup('Сырные палочки', 70)">
 							<h3>Сырные палочки</h3>
 							<img src="../images1/stud.jpg"/>
-								<p>70 ₽</p>
+							<p>70 ₽</p>
 						</div>
 			</article>
 		<article>
@@ -230,6 +231,26 @@
 		</div>
 		</article>
 		</section>
+	  <!-- Попап корзины -->
+    <div class="popup-cart" id="popupCart">
+	    <div class="popup-content">
+			  <h2>Корзина</h2>
+			  <div class="cart-items" id="cartItems">
+				<!-- Здесь будут отображаться выбранные товары -->
+			  </div>
+			<button class="close-button" id="closePopup">Закрыть</button>
+	    </div>
+    </div>
+
+    <!-- Попап для меню -->
+    <div class="menu-popup" id="menuPopup" style="display: none;">
+	    <div class="popup-content">
+			  <h2 id="popupTitle">Детали элемента меню</h2>
+			  <p id="popupDescription">Описание элемента появится здесь.</p>
+			<button class="add-to-cart-button" id="addToCartButton">Добавить в корзину</button>
+			<button class="close-button" id="closeMenuPopup">Закрыть</button>
+	    </div>
+    </div>
 	</main>
 
 	<aside class="aside">
@@ -280,27 +301,21 @@
     <p>© 2024 ShawaClub. Все права защищены.</p>
   </div>
 </footer>
-
-<!-- Попап корзины -->
-<div class="popup-cart" id="popupCart">
-	<div class="popup-content">
-			<h2>Корзина</h2>
-			<div class="cart-items" id="cartItems">
-					<!-- Здесь будут отображаться выбранные товары -->
-			</div>
-			<button class="close-button" id="closePopup">Закрыть</button>
+<div class="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <span class="close" onclick="closePopup()">×</span>
+        <img id="popupImage" src="" alt="Шаурма">
+        <h3 id="popupTitle"></h3>
+        <p id="popupPrice"></p>
+        <p>Выберите добавки:</p>
+        <form id="addonsForm">
+            <label><input type="checkbox" name="addon" value="Сыр" /> Сыр (20 ₽)</label><br>
+            <label><input type="checkbox" name="addon" value="Бекон" /> Бекон (30 ₽)</label><br>
+            <label><input type="checkbox" name="addon" value="Фри" /> Фри (25 ₽)</label><br>
+        </form>
+        <button onclick="addToCart()">Добавить</button>
+    </div>
 	</div>
-</div>
-
-<!-- Попап для меню -->
-<div class="menu-popup" id="menuPopup" style="display: none;">
-	<div class="popup-content">
-			<h2 id="popupTitle">Детали элемента меню</h2>
-			<p id="popupDescription">Описание элемента появится здесь.</p>
-			<button class="add-to-cart-button" id="addToCartButton">Добавить в корзину</button>
-			<button class="close-button" id="closeMenuPopup">Закрыть</button>
-	</div>
-</div>
 <script src="SCRIPT/Scriptt.js"></script>
 </body>
 </html>

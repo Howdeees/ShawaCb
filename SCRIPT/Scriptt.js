@@ -1,58 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
-	// Элементы
-	const menuItems = document.querySelectorAll('.article-item') // Все элементы menu-item
-	const menuPopup = document.getElementById('menuPopup')
-	const popupTitle = document.getElementById('popupTitle')
-	const popupDescription = document.getElementById('popupDescription')
-	const closeMenuPopup = document.getElementById('closeMenuPopup')
-	const addToCartButton = document.getElementById('addToCartButton')
+	// Добавление в корзину
+	function addToCart() {
+		const title = document.getElementById('popupTitle').innerText
+		const basePrice = parseInt(document.getElementById('popupPrice').innerText)
+		const addons = [...document.querySelectorAll('input[name="addon"]:checked')]
 
-	const cartButton = document.getElementById('cartButton')
-	const popupCart = document.getElementById('popupCart')
-	const closePopupCart = document.getElementById('closePopup')
-	const cartItemsContainer = document.getElementById('cartItems')
+		// Сбор добавок
+		const addonDetails = addons.map(addon => addon.value)
+		const addonPrice = addons.reduce((sum, addon) => {
+			if (addon.value === 'Сыр') return sum + 20
+			if (addon.value === 'Бекон') return sum + 30
+			if (addon.value === 'Фри') return sum + 25
+			return sum
+		}, 0)
 
-	let selectedMenuItem = {} // Для хранения текущего элемента
-	let cartItems = [] // Для хранения товаров в корзине
+		const totalPrice = basePrice + addonPrice
 
-	// Открытие попапа с деталями товара
-	menuItems.forEach(item => {
-		item.addEventListener('click', () => {
-			const itemName = item.querySelector('h3').textContent // Название из первого <p>
-			const itemPrice = parseInt(
-				item.querySelectorAll('p')[1].textContent.replace(/\D/g, '')
-			) // Цена из второго <p>
+		// Получение текущей корзины из localStorage
+		const cart = JSON.parse(localStorage.getItem('cart')) || []
 
-			// Обновляем попап
-			popupTitle.textContent = itemName // Название товара
-			popupDescription.textContent = `Цена: ${itemPrice} ₽` // Цена товара
+		// Добавление нового элемента
+		cart.push({ title, addonDetails, totalPrice })
 
-			// Сохраняем текущий товар
-			selectedMenuItem = { name: itemName, price: itemPrice }
+		// Сохранение корзины в localStorage
+		localStorage.setItem('cart', JSON.stringify(cart))
 
-			menuPopup.style.display = 'flex' // Показываем попап
-		})
-	})
+		// Подтверждение
+		alert(
+			`Добавлено в корзину: ${title} с добавками ${
+				addonDetails.join(', ') || 'Нет'
+			} за ${totalPrice} ₽`
+		)
+
+		closePopup()
+	}
+	function openPopup(title, price) {
+		document.getElementById('popupTitle').innerText = title
+		document.getElementById('popupPrice').innerText = `${price} ₽`
+		document.getElementById('popupImage').src = '../images1/stud.jpg' // Замените на нужное изображение
+
+		document.querySelector('.popup').style.display = 'block'
+		document.querySelector('.overlay').style.display = 'block'
+	}
 
 	// Закрытие попапа
-	closeMenuPopup.addEventListener('click', () => {
-		menuPopup.style.display = 'none' // Скрываем попап
-	})
-
-	// Добавление товара в корзину из попапа
-	addToCartButton.addEventListener('click', () => {
-		cartItems.push(selectedMenuItem) // Добавляем выбранный товар в корзину
-		alert(`${selectedMenuItem.name} добавлен в корзину!`)
-
-		menuPopup.style.display = 'none' // Закрываем попап
-	})
-
-	// Открытие корзины в новой вкладке
-	cartButton.addEventListener('click', () => {
-		// Сохраняем текущие данные корзины в localStorage
-		localStorage.setItem('cartItems', JSON.stringify(cartItems))
-
-		// Открываем новую вкладку с корзиной
-		window.open('cart.html', '_blank')
-	})
+	function closePopup() {
+		document.querySelector('.popup').style.display = 'none'
+		document.querySelector('.overlay').style.display = 'none'
+	}
+	// Экспорт функций
+	window.addToCart = addToCart
+	window.openPopup = openPopup
+	window.closePopup = closePopup
 })

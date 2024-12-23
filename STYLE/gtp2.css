@@ -132,7 +132,6 @@ body {
 .aside {
 	width: 18%;
 	display: inline-block;
-	float: right;
 	margin-right: auto;
 	background-color: lightgray;
 	text-align: center;
@@ -173,15 +172,16 @@ body {
 	border-radius: 10px; /* Скругление углов */
 	background-color: #333; /* Фон для контраста */
 	color: #fff; /* Цвет текста */
-	padding: 5px; /* Внутренние отступы */
-	margin: 5px; /* Внешние отступы */
+	padding: 2px; /* Внутренние отступы */
+	margin: 10px; /* Внешние отступы */
 	align-items: center;
+	width: fit-content;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
 	cursor: pointer; /* Указатель мыши при наведении */
 	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении*/
 }
 .article-item img {
-	width: 95%;
+	width: 94%;
 	border-radius: 15px;
 	margin: 10px;
 }
@@ -399,4 +399,43 @@ h2 {
 	padding-top: 10px;
 	font-size: 14px;
 	color: #bbb;
+}
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	padding: 20px;
+	z-index: 1000;
+}
+
+.popup img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.popup .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	color: #888;
+	font-size: 18px;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
 }
