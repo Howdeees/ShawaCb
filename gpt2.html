@@ -35,57 +35,57 @@
 			
 					<h2>Шаурма</h2>
 					<div class="article-items">
-							<div class="article-item" onclick="openPopup('Студенческая', 140)">
+							<div class="article-item" onclick="openPopup('Студенческая', 140,'Состав: курица, салат, огурец, соус \n Вес: 150гр. ')">
 								<h3>Студенческая</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>140 ₽</p>
 							</div>
-							<div class="article-item" onclick="openPopup('Классическая', 200)">
+							<div class="article-item" onclick="openPopup('Классическая', 200,'Состав: курица, салат, огурец, помидор, соус \n Вес: 250гр.')">
 								<h3>Классическая</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>200 ₽</p>
 						  </div>
-							<div class="article-item" onclick="openPopup('Сырная', 230)">
+							<div class="article-item" onclick="openPopup('Сырная', 230,'Состав: курица, сыр, салат, огурец, помидор, соус сырный \n Вес: 250гр.')">
 								<h3>Сырная</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>230 ₽</p>
 						  </div>
-							<div class="article-item" data-id="SStr" onclick="openPopup('Со стрипсами', 240)">
+							<div class="article-item" data-id="SStr" onclick="openPopup('Со стрипсами', 240,'Состав: стрипсы(кур), салат, огурец, помидор, соус \n Вес: 250гр.')">
 								<h3>Со стрипсами</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>240 ₽</p>
 						  </div>
-						  <div class="article-item" onclick="openPopup('Царская', 260)">
+						  <div class="article-item" onclick="openPopup('Царская', 260,'Состав: курица, сыр, салат, огурец, помидор, соус фирменный \n Вес: 280гр.')">
 							  <h3>Царская</h3>
 							  <img src="../images1/stud.jpg"/>
 								<p>260 ₽</p>
 					    </div>
-							<div class="article-item" onclick="openPopup('Царская со стрипсами', 285)">
+							<div class="article-item" onclick="openPopup('Царская со стрипсами', 285,'Состав: стрипсы(кур), сыр, салат, огурец, помидор, соус фирменный \n Вес: 280гр.')">
 								<h3>Царская со стрипсами</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>285 ₽</p>
 						  </div>
-							<div class="article-item" onclick="openPopup('MAXXX', 290)">
+							<div class="article-item" onclick="openPopup('MAXXX', 290,'Состав: курица, фри, сыр, салат, огурец, помидор, соус фирменный \n Вес: 320гр.')">
 								<h3>MAXXX</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>290 ₽</p>
 						  </div>
-							<div class="article-item" onclick="openPopup('MAXXX со стрипсами', 320)">
+							<div class="article-item" onclick="openPopup('MAXXX со стрипсами', 320,'Состав: стрипсы(кур), фри, сыр, салат, огурец, помидор, соус фирменный \n Вес: 320гр.')">
 								<h3>MAXXX со стрипсами</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>320 ₽</p>
 						  </div>
-							<div class="article-item" onclick="openPopup('Терияки', 300)">
+							<div class="article-item" onclick="openPopup('Терияки', 300, 'Состав: курица, салат, огурец, помидор, кунжут, соус терияки \n Вес: 260гр.')">
 								<h3>Терияки</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>300 ₽</p>
 						  </div>
-							<div class="article-item" onclick="openPopup('Терияки с креветками', 340)">
+							<div class="article-item" onclick="openPopup('Терияки с креветками', 340, 'Состав: креветки, салат, огурец, помидор, кунжут, соус терияки \n Вес: 260гр.')">
 								<h3>Терияки с креветками</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>340 ₽</p>
 						  </div>
-							<div class="article-item" onclick="openPopup('Вегетарианская', 150)">
+							<div class="article-item" onclick="openPopup('Вегетарианская', 150, 'Состав: котлета(картоф.), салат, огурец, помидор, кунжут, соус \n Вес: 140гр.')">
 								<h3>Вегетарианская</h3>
 								<img src="../images1/stud.jpg"/>
 								<p>155 ₽</p>
@@ -305,17 +305,18 @@
     <div class="popup" id="popup">
         <span class="close" onclick="closePopup()">×</span>
         <img id="popupImage" src="" alt="Шаурма">
-        <h3 id="popupTitle"></h3>
-        <p id="popupPrice"></p>
-        <p>Выберите добавки:</p>
-        <form id="addonsForm">
+				<p class='posn' id="Title"></p>
+        <p class='posn' id="popupPrice"></p>
+				<p class='psost' id="pInfo"></p>
+        <p class='posn'>Выберите добавки:</p>
+        <form class='plabels' id="addonsForm">
             <label><input type="checkbox" name="addon" value="Сыр" /> Сыр (20 ₽)</label><br>
             <label><input type="checkbox" name="addon" value="Бекон" /> Бекон (30 ₽)</label><br>
             <label><input type="checkbox" name="addon" value="Фри" /> Фри (25 ₽)</label><br>
         </form>
-        <button onclick="addToCart()">Добавить</button>
+        <button class="client-button" onclick="addToCart()">Добавить</button>
     </div>
 	</div>
-<script src="SCRIPT/Scriptt.js"></script>
 </body>
+<script src="SCRIPT/Scriptt.js"></script>
 </html>

@@ -34,8 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		closePopup()
 	}
-	function openPopup(title, price) {
+	function openPopup(title, price, info) {
 		document.getElementById('popupTitle').innerText = title
+		document.getElementById('Title').innerText = title
+		document.getElementById('pInfo').innerText = info
 		document.getElementById('popupPrice').innerText = `${price} ₽`
 		document.getElementById('popupImage').src = '../images1/stud.jpg' // Замените на нужное изображение
 
