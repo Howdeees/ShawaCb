@@ -189,12 +189,11 @@ aside {
 }
 
 .article-item {
-	p;
 	border-radius: 10px; /* Скругление углов */
 	background-color: #333; /* Фон для контраста */
 	color: #fff; /* Цвет текста */
 	padding: 0px; /* Внутренние отступы */
-	margin: 0px; /* Внешние отступы */
+	margin: 3px; /* Внешние отступы */
 	align-items: center;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
 	cursor: pointer; /* Указатель мыши при наведении */
@@ -210,16 +209,14 @@ aside {
 .article-item p {
 	text-align: center;
 	font-size: 30px;
-	margin: 0;
-
+	margin: 2px;
 }
 .article-item h3 {
 	font-weight: 400;
 	font-size: 30px;
 	font-family: 'M PLUS Rounded 1c';
 	text-align: center;
-	margin: 0;
-
+	margin: 2px;
 }
 
 .article-item:hover {
@@ -232,7 +229,7 @@ aside {
 	display: inline-block; /* Flexbox для внутренних элементов */
 	align-items: center; /* Центрирование содержимого по горизонтали */
 	background-image: url('../images1/greyback.jpg'); /* Фон для секции */
-	background-size:cover; /* Растянуть фон по размеру секции */
+	background-size: cover; /* Растянуть фон по размеру секции */
 	background-position: center; /* Центрируем фон */
 	background-repeat: no-repeat; /* Отключаем повторение */
 	box-sizing: border-box; /* Учитываем отступы */
