@@ -18,6 +18,9 @@ body {
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 	margin-bottom: 2%;
 }
+main {
+	flex-grow: 1;
+}
 .head {
 	font-family: 'Algerian';
 	font-weight: 1000;
@@ -128,22 +131,30 @@ body {
 .modal-close:hover {
 	background-color: #e68a00;
 }
-
-.aside {
+.layout {
+	display: flex; /* Включаем Flexbox */
+	flex-direction: column; /* Располагаем элементы вертикально */
+	width: 100%; /* Занимает всю ширину страницы */
+}
+aside {
+	top: 100px;
 	width: 18%;
-	display: inline-block;
-	margin-right: auto;
 	background-color: lightgray;
 	text-align: center;
-	margin-bottom: 15px;
-	height: 100%;
 	font-size: 25px;
+}
+.article-sectionC {
+	display: block;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
+	border-radius: 15px;
+	margin: 20px;
 }
 
 .article-sectionR {
 	display: inline-block;
 	align-items: center;
-	width: 46%; /* На всю ширину окна */
+	width: 40%; /* На всю ширину окна */
 	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
 	margin-left: 2%; /* Центровка по горизонтали */
@@ -154,14 +165,23 @@ body {
 .article-sectionL {
 	display: inline-block;
 	align-items: center;
-	width: 46%; /* На всю ширину окна */
+	width: 45%; /* На всю ширину окна */
 	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	margin-left: 2%;
+	margin: 1%;
 	padding: 2px;
 	border-radius: 15px;
 }
-
+.article-section {
+	display: inline-block;
+	width: 47%; /* На всю ширину окна */
+	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	margin: 10px;
+	padding: 10px;
+	border-radius: 15px;
+	margin-left: 20px;
+}
 .article-items {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* Два столбца */
@@ -169,34 +189,37 @@ body {
 }
 
 .article-item {
+	p;
 	border-radius: 10px; /* Скругление углов */
 	background-color: #333; /* Фон для контраста */
 	color: #fff; /* Цвет текста */
-	padding: 2px; /* Внутренние отступы */
-	margin: 10px; /* Внешние отступы */
+	padding: 0px; /* Внутренние отступы */
+	margin: 0px; /* Внешние отступы */
 	align-items: center;
-	width: fit-content;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
 	cursor: pointer; /* Указатель мыши при наведении */
 	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении*/
 }
 .article-item img {
-	width: 94%;
+	width: 90%;
 	border-radius: 15px;
-	margin: 10px;
+	margin-left: 5%;
+	padding: px;
 }
 
 .article-item p {
 	text-align: center;
 	font-size: 30px;
 	margin: 0;
+
 }
 .article-item h3 {
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 30px;
 	font-family: 'M PLUS Rounded 1c';
 	text-align: center;
-	margin: 2px;
+	margin: 0;
+
 }
 
 .article-item:hover {
@@ -209,15 +232,14 @@ body {
 	display: inline-block; /* Flexbox для внутренних элементов */
 	align-items: center; /* Центрирование содержимого по горизонтали */
 	background-image: url('../images1/greyback.jpg'); /* Фон для секции */
-	background-size: cover; /* Растянуть фон по размеру секции */
+	background-size:cover; /* Растянуть фон по размеру секции */
 	background-position: center; /* Центрируем фон */
 	background-repeat: no-repeat; /* Отключаем повторение */
 	box-sizing: border-box; /* Учитываем отступы */
 	border-radius: 15px; /* Скругление углов (опционально) */
-	padding: 0%; /* Внутренние отступы */
-	margin: 2%;
+	padding: 0; /* Внутренние отступы */
+	margin: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	width: auto; /* Автоматическая ширина */
 	height: auto; /* Автоматическая высота */
 	margin-top: 100px;
 	color: rgba(248, 66, 10, 0.747);
@@ -226,7 +248,7 @@ body {
 
 .menu-section h1,
 h2 {
-	margin: 2% 0 0;
+	margin: 0 0 7px;
 	font-size: 38px; /* Размер текста */
 	font-weight: 350; /* Жирный текст */
 	text-align: center;
@@ -427,7 +449,7 @@ h2 {
 .popup .psost {
 	color: #888;
 	font-size: 16px;
-	padding-left: 10px;
+	padding-left: 0px;
 	margin: 0;
 }
 
