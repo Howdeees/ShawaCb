@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shawa Club</title>
+		<link rel="stylesheet" href="STYLE/gtp2.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="menu">
+					<p class="menu-button">☰</p>
+					<a href="/gpt2.html" class="menu-link">Меню</a>
+					<a href="/gpt2.html" class="menu-link">Как нас найти</a> <!-- Под менб сделать раздел с местонахождением -->
+					<a href="/gpt2.html" class="menu-link">О нас</a> <!-- Ссылка на отдельную страницу с фотокарточками  с информацией о заведении  -->
+				</div>
+				<div class="logo">
+					<img src="../images1/Logo.png" alt="Logo" />
+					<span class="head">Shawa Club</span>
+				</div>
+				<div class="contact">
+					<a href="tel:+79501130303" class="phone">+7 (950) 113-03-03</a>
+					<div id="cartItems">
+						<button class="client-button" id="cartButton" onclick="location.href='/cart.html';">Корзина</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+		<section class="menu-section">
+			<!-- Шаурма -->
+					<h1>Menu</h1>
+			<article class="article-section">	
+			
+					<h2>Shawa</h2>
+					<div class="article-items">
+							<div class="article-item" onclick="openPopup('Студенческая', 140,'Состав: курица, салат, огурец, соус \n Вес: 150гр. ', '../images1/stud.jpg')">
+								<h3>Студенческая</h3>
+								<img src="../images1/stud.jpg"/>
+								<p>140 ₽</p>
+							</div>
+							<div class="article-item" onclick="openPopup('Классическая', 200,'Состав: курица, салат, огурец, помидор, соус \n Вес: 250гр.','../images1/kur.jpg')">
+								<h3>Классическая</h3>
+								<img src="../images1/kur.jpg"/>
+								<p>200 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Сырная', 230,'Состав: курица, сыр, салат, огурец, помидор, соус сырный \n Вес: 250гр.','../images1/cheese.jpg')">
+								<h3>Сырная</h3>
+								<img src="../images1/cheese.jpg"/>
+								<p>230 ₽</p>
+						  </div>
+							<div class="article-item" data-id="SStr" onclick="openPopup('Со стрипсами', 240,'Состав: стрипсы(кур), салат, огурец, помидор, соус \n Вес: 250гр.','../images1/kur.jpg')">
+								<h3>Со стрипсами</h3>
+								<img src="../images1/kur.jpg"/>
+								<p>240 ₽</p>
+						  </div>
+						  <div class="article-item" onclick="openPopup('Царская', 260,'Состав: курица, сыр, салат, огурец, помидор, соус фирменный \n Вес: 280гр.','../images1/king.jpg')">
+							  <h3>Царская</h3>
+							  <img src="../images1/king.jpg"/>
+								<p>260 ₽</p>
+					    </div>
+							<div class="article-item" onclick="openPopup('Царская со стрипсами', 285,'Состав: стрипсы(кур), сыр, салат, огурец, помидор, соус фирменный \n Вес: 280гр.','../images1/king.jpg')">
+								<h3>Царская со стрипсами</h3>
+								<img src="../images1/king.jpg"/>
+								<p>285 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('MAXXX', 290,'Состав: курица, фри, сыр, салат, огурец, помидор, соус фирменный \n Вес: 320гр.','../images1/maxxx.jpg')">
+								<h3>MAXXX</h3>
+								<img src="../images1/maxxx.jpg"/>
+								<p>290 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('MAXXX со стрипсами', 320,'Состав: стрипсы(кур), фри, сыр, салат, огурец, помидор, соус фирменный \n Вес: 320гр.','../images1/maxxx2.jpg')">
+								<h3>MAXXX со стрипсами</h3>
+								<img src="../images1/maxxx2.jpg"/>
+								<p>320 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Терияки', 300, 'Состав: курица, салат, огурец, помидор, кунжут, соус терияки \n Вес: 260гр.','../images1/teriyaki.jpg')">
+								<h3>Терияки</h3>
+								<img src="../images1/teriyaki.jpg"/>
+								<p>300 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Терияки с креветками', 340, 'Состав: креветки, салат, огурец, помидор, кунжут, соус терияки \n Вес: 260гр.','../images1/teriyaki2.jpg')">
+								<h3>Терияки с креветками</h3>
+								<img src="../images1/teriyaki2.jpg"/>
+								<p>340 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Вегетарианская', 150, 'Состав: котлета(картоф.), салат, огурец, помидор, кунжут, соус \n Вес: 140гр.','../images1/vegan.jpg')">
+								<h3>Вегетарианская</h3>
+								<img src="../images1/vegan.jpg"/>
+								<p>155 ₽</p>
+						  </div>
+					</div>
+		</article>
+		<article class="article-section">
+			<!-- Бургеры -->
+			
+					<h2>Burgers</h2>
+					<div class="article-items">
+							<div class="article-item" onclick="openPopup('Бургер', 240, 'Состав: котлета(говяд.) салат, огурец, соус \n Вес: 240гр.','../images1/burg.jpg')">
+									<h3>Бургер </h3>
+									<img src="../images1/burg.jpg"/>
+								<p>240 ₽</p>
+							</div>
+							<div class="article-item" onclick="openPopup('Чизбургер', 270, 'Состав: котлета(говяд.), салат, ломтик сыра, огурец, соус \n Вес: 250гр.','../images1/burch.jpg')">
+								<h3>Чизбургер</h3>
+								<img src="../images1/burch.jpg"/>
+								<p>270 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Двойной бургер', 310, 'Состав: 2х котлета(говяд.), салат, огурец, соус \n Вес: 300гр.','../images1/double.jpg')">
+								<h3>Двойной бургер</h3>
+								<img src="../images1/double.jpg"/>
+								<p>310 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Двойной чизбургер', 350, 'Состав: 2х котлета(говяд.), салат,2х ломтик сыра, огурец, соус \n Вес: 320гр.','../images1/doublech.jpg')">
+							  <h3>Двойной чизбургер</h3>
+							  <img src="../images1/doublech.jpg"/>
+								<p>350 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Бигбургер', 300, 'Состав: котлета(говяд.) большая, салат, огурец, помидор, ломтик сыра, кунжут, соус \n Вес: 300гр.','../images1/big.jpg')">
+							  <h3>Бигбургер</h3>
+							  <img src="../images1/big.jpg"/>
+								<p>300 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Двойной бигбургер', 420, 'Состав:2х котлета(говяд.) большая, салат, огурец, помидор,2х ломтик сыра, кунжут, соус \n Вес: 360гр.','../images1/doublebig.jpg')">
+							  <h3>Двойной бигбургер</h3>
+							  <img src="../images1/doublebig.jpg"/>
+								<p>420 ₽</p>
+						  </div>
+					</div>
+			
+		</article>
+		<article class="article-section">
+			<!-- Закуски -->
+			
+					<h2>Snack</h2>
+					<div class="article-items">
+							<div class="article-item" onclick="openPopup('Хрустящий картофель фри', 120,'Золотистая хрустящяя корочка, мягкая внутри  ','../images1/fries.jpg')">
+									<h3>Хрустящий фри</h3>
+									<img src="../images1/fries.jpg"/>
+								<p>120 ₽</p>
+							</div>
+							<div class="article-item" onclick="openPopup('Фирменные стрипсы', 160,'Жаренная курочка в панировки сладкий чили и чеснок ','../images1/strips.jpg')">
+								<h3>Фирменные стрипсы</h3>
+								<img src="../images1/strips.jpg"/>
+								<p>160 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Наггетсы', 150,'как в КФС','../images1/nuggets.jpg')">
+								<h3>Наггетсы</h3>
+								<img src="../images1/nuggets.jpg"/>
+								<p>150 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Картофель фри+стрипсы', 260,'Перекус после завтрака, сочетается с колой','../images1/fristrips.jpg')">
+								<h3>Фри + стрипсы</h3>
+								<img src="../images1/fristrips.jpg"/>
+								<p>260 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Картофель фри+Наггетсы', 250, 'Подходит к бургеру и соку ','../images1/frinugg.jpg')">
+								<h3>Фри + Наггетсы</h3>
+								<img src="../images1/frinugg.jpg"/>
+								<p>250 ₽</p>
+						  </div>
+							<div class="article-item" onclick="openPopup('Сырные палочки', 150,'Сыр чеддер обжаренный в масле','../images1/cheesesticks.jpg')">
+								<h3>Сырные палочки</h3>
+								<img src="../images1/cheesesticks.jpg"/>
+								<p>150 ₽</p>
+						  </div>
+
+					</div>
+		
+		</article>
+		<article class="article-section">
+			<!-- Допы -->
+        <h2>Dop's</h2>
+        <div class="article-items">
+            <div class="article-item">
+							<h3>Перец халапеньо</h3>
+							<img src="../images1/hot.jpg"/>
+							<p>30 ₽</p>
+						</div>
+            <div class="article-item">
+							<h3>Соус на выбор</h3>
+							<img src="../images1/sauses.jpg"/>
+							<p>40 ₽</p>
+						</div>
+            <div class="article-item">
+							<h3>Ломтик сыра</h3>
+							<img src="../images1/cheesedoping.jpg"/>
+							<p>30 ₽</p>
+						</div>
+						<div class="article-item">
+							<h3>Фри</h3>
+							<img src="../images1/fries.jpg"/>
+							<p>40 ₽</p>
+						</div>
+						<div class="article-item">
+							<h3>Доп. мясо</h3>
+							<img src="../images1/meat.jpg"/>
+							<p>70 ₽</p>
+						</div>
+						<div class="article-item">
+							<h3>Сырные палочки</h3>
+							<img src="../images1/cheesesticksdoping.jpg"/>
+							<p>70 ₽</p>
+						</div>
+			</article>
+			<section id="location-info" class="menu-section">
+				<h1>Menu</h1>
+				<article>
+						<div class="mapcontainer">
+							<!-- Map Section -->
+							<div class="map">
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509616!2d144.95373531592595!3d-37.8172099797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577b3bba62bdc0!2sEureka%20Skydeck!5e0!3m2!1sen!2sau!4v1612398472997!5m2!1sen!2sau" 
+									width=800px 
+									height=400px 
+									style="border:0; border-radius: 8px;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+
+							<!-- Text Section -->
+							<div class="maptext">
+								<h2>Наше местоположение</h2>
+								<p>
+									Адрес: ул. Примерная, д. 123, Москва<br>
+									Время работы: Пн-Вс: 10:00 - 22:00<br>
+									Радиус доставки: до 10 км от заведения<br>
+								</p>
+							</div>
+						</div>
+				  </article>
+	     </section>
+=
+		<article>
+		<!-- Модальное окно настройки шаурмы -->
+		<div id="customization-modal" class="modal">
+			<div class="modal-content">
+				<h2 id="customization-title"></h2>
+				<p>Выберите дополнительные ингредиенты:</p>
+				<div class="customization-options">
+					<label
+						><input type="checkbox" value="Сыр (+20 ₽)" /> Сыр (+20 ₽)</label
+					>
+					<label
+						><input type="checkbox" value="Острый соус (+15 ₽)" /> Острый соус
+						(+15 ₽)</label
+					>
+					<label
+						><input type="checkbox" value="Бекон (+30 ₽)" /> Бекон (+30
+						₽)</label
+					>
+				</div>
+				<button class="modal-button" onclick="addCustomizedToCart()">
+					Добавить в корзину
+				</button>
+				<button class="modal-close" onclick="closeModal()">Закрыть</button>
+			</div>
+		</div>
+		</article>
+		</section>
+	  <!-- Попап корзины -->
+    <div class="popup-cart" id="popupCart">
+	    <div class="popup-content">
+			  <h2>Корзина</h2>
+			  <div class="cart-items" id="cartItems">
+				<!-- Здесь будут отображаться выбранные товары -->
+			  </div>
+			<button class="close-button" id="closePopup">Закрыть</button>
+	    </div>
+    </div>
+
+    <!-- Попап для меню -->
+    <div class="menu-popup" id="menuPopup" style="display: none;">
+	    <div class="popup-content">
+			  <h2 id="popupTitle">Детали элемента меню</h2>
+			  <p id="popupDescription">Описание элемента появится здесь.</p>
+			<button class="add-to-cart-button" id="addToCartButton">Добавить в корзину</button>
+			<button class="close-button" id="closeMenuPopup">Закрыть</button>
+	    </div>
+    </div>
+	</main>
+	<footer class="footer">
+  <div class="footer-container">
+    <!-- Разделы меню -->
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>ShawaClub</h3>
+        <a href="#about-us">О нас</a>
+        <a href="#blog">Блог</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+      <div class="footer-column">
+        <h3>Карьера</h3>
+        <a href="#jobs">Работа в ShawaClub</a>
+        <a href="#partner">Партнёрство</a>
+      </div>
+      <div class="footer-column">
+        <h3>Это интересно</h3>
+        <a href="#features">Наша концепция</a>
+        <a href="#master-classes">Мастер-классы</a>
+        <a href="#corporate">Корпоративные заказы</a>
+      </div>
+    </div>
+
+    <!-- Статистика -->
+    <div class="footer-stats">
+      <p><strong>156 000+</strong> заказов в этом месяце</p>
+      <p><strong>28</strong> в 5 городах</p>
+    </div>
+
+    <!-- Контакты -->
+    <div class="footer-contacts">
+      <h3>Контакты</h3>
+      <p>📧 <a href="mailto:info@shawaclub.ru">info@shawaclub.ru</a></p>
+      <p>📞 <a href="tel:+78129822727">+7 (812) 982-27-27</a></p>
+      <div class="footer-socials">
+        <a href="#ok">ОК</a>
+        <a href="#vk">VK</a>
+        <a href="#youtube">YouTube</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 ShawaClub. Все права защищены.</p>
+  </div>
+</footer>
+
+<div class="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <span class="close" onclick="closePopup()">×</span>
+        <img id="popupImage" src="" alt="Шаурма">
+				<p class='posn' id="Title"></p>
+        <p class='posn' id="popupPrice"></p>
+				<p class='psost' id="pInfo"></p>
+        <p class='posn'>Выберите добавки:</p>
+        <form class='plabels' id="addonsForm">
+            <label><input type="checkbox" name="addon" value="Сыр" /> Сыр (20 ₽)</label><br>
+            <label><input type="checkbox" name="addon" value="Бекон" /> Бекон (30 ₽)</label><br>
+            <label><input type="checkbox" name="addon" value="Фри" /> Фри (25 ₽)</label><br>
+        </form>
+        <button class="client-button" onclick="addToCart()">Добавить</button>
+    </div>
+	<div class="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <span class="close" onclick="closePopup()">×</span>
+        <img id="popupImage" src="" alt="Шаурма">
+				<p class='posn' id="Title"></p>
+        <p class='posn' id="popupPrice"></p>
+				<p class='psost' id="pInfo"></p>
+        <button class="client-button" onclick="addToCart()">Добавить</button>
+    </div>
+	</div>
+
+</body>
+<script src="SCRIPT/Scriptt.js"></script>
+</html>
