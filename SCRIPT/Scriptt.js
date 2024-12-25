@@ -1,8 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-	// Добавление в корзину
+	// Функция открытия попапа
+	function openPopup(title, price, info = '', image = '') {
+		document.getElementById('Title').innerText = title // Заполнение заголовка
+		document.getElementById('popupPrice').innerText = `${price} ₽` // Заполнение цены
+		document.getElementById('pInfo').innerText = info // Заполнение информации
+		document.getElementById('popupImage').src = image || '' // Установка изображения
+
+		// Отображение попапа
+		document.querySelector('.popup').style.display = 'block'
+		document.querySelector('.overlay').style.display = 'block'
+	}
+
+	// Функция добавления в корзину
 	function addToCart() {
-		const title = document.getElementById('popupTitle').innerText
-		const basePrice = parseInt(document.getElementById('popupPrice').innerText)
+		const title = document.getElementById('Title').innerText
+		const basePrice = parseInt(
+			document.getElementById('popupPrice').innerText.replace(' ₽', '')
+		)
 		const addons = [...document.querySelectorAll('input[name="addon"]:checked')]
 
 		// Сбор добавок
@@ -35,11 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		closePopup()
 	}
 
-	// Закрытие попапа
+	// Функция закрытия попапа
 	function closePopup() {
 		document.querySelector('.popup').style.display = 'none'
 		document.querySelector('.overlay').style.display = 'none'
 	}
+
 	// Экспорт функций
 	window.addToCart = addToCart
 	window.openPopup = openPopup
