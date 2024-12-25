@@ -125,7 +125,7 @@ h1 {
 	align-items: center;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
 	cursor: pointer; /* Указатель мыши при наведении */
-	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении*/
+	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении*/z
 }
 .article-item img {
 	width: 90%;

@@ -3,29 +3,51 @@
 body {
 	margin: 0;
 	font-family: 'M PLUS Rounded 1c';
-	background-color: #222222fb;
+	background-color: #7e7e7ed2;
+	background-image: url('/images1/back.jpg');
+	background-size: cover;
 	color: #fff;
 }
+
 /* header */
 .header {
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
-	background-color: #333;
+	background-color: #464646;
 	color: white;
-	padding: 5px 0;
-	font-weight: 700;
+	top: 0;
+	padding: 0px 0;
+	font-weight: 701;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	margin-bottom: 2%;
+	margin: 0px;
 }
 .head {
 	font-family: 'Algerian';
-	font-weight: 1000;
-	font-size: 50px;
-	color: rgba(248, 66, 10, 0.747);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	font-weight: 300;
+	font-size: 58px;
+	color: rgb(202, 202, 202);
 }
-
+h1 {
+	margin: 0px;
+	margin-top: 75px;
+	font-size: 58px;
+	font-weight: 500; /* Жирный текст */
+	text-align: center;
+	color: rgb(255, 255, 255);
+	text-shadow: rgb(92, 92, 92) 2px 1px 1px;
+	font-family: 'M PLUS Rounded 1c';
+}
+h2 {
+	margin: 0px;
+	margin-top: 75px;
+	font-size: 58px;
+	font-weight: 500; /* Жирный текст */
+	text-align: center;
+	color: rgb(255, 255, 255);
+	text-shadow: rgb(92, 92, 92) 2px 1px 1px;
+	font-family: 'M PLUS Rounded 1c';
+}
 .container {
 	display: flex;
 	justify-content: space-between;
@@ -44,7 +66,6 @@ body {
 	border: none;
 	color: rgb(255, 254, 254);
 	font-size: 20px;
-	cursor: pointer;
 	margin-right: 10px;
 }
 
@@ -78,7 +99,7 @@ body {
 }
 
 .client-button {
-	background-color: rgba(248, 66, 10, 0.747);
+	background-color: rgba(159, 161, 161, 0.747);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 	border: none;
 	padding: 8px 15px;
@@ -92,10 +113,18 @@ body {
 .client-button:hover {
 	background-color: #e68a00;
 }
+
+.menu-section {
+	box-sizing: border-box; /* Учитываем отступы */
+	border-radius: 15px; /* Скругление углов (опционально)*/
+	padding: 0; /* Внутренние отступы */
+	margin: 1%;
+	margin-top: 0;
+	height: auto; /* Автоматическая высота */
+}
 /* header */
 
 .cart-section {
-	display: inline-block; /* Flexbox для внутренних элементов */
 	align-items: center; /* Центрирование содержимого по горизонтали */
 	background-image: url(https://s3.stroi-news.ru/img/chernaya-shtukaturka-tekstura-krasivo-19.jpg); /* Фон для секции */
 	background-size: cover; /* Растянуть фон по размеру секции */
@@ -106,20 +135,16 @@ body {
 	padding: 0%; /* Внутренние отступы */
 	margin: 2%;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	width: auto; /* Автоматическая ширина */
-	height: auto; /* Автоматическая высота */
-	margin-top: 100px;
-	color: rgba(248, 66, 10, 0.747);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	width: 96%; /* Автоматическая ширина */
+	align-self: start;
 }
 
 .cart-item {
-	border: 1px solid #ddd;
+	align-self: start;
+	border: 1px solid #f1f1f1;
 	padding: 10px;
-	margin-bottom: 10px;
+	margin: 10px;
 	border-radius: 5px;
-	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 
@@ -139,7 +164,7 @@ body {
 
 /* Общий стиль футера */
 .footer {
-	background-color: #333;
+	background-color: #464646a6;
 	color: #fff;
 	padding: 40px 20px 20px;
 	font-family: 'M PLUS Rounded 1c';
@@ -160,8 +185,8 @@ body {
 	gap: 20px;
 }
 
-.footer-column h3 {
-	color: rgba(248, 66, 10, 0.747);
+.footer h3 {
+	color: rgb(202, 202, 202);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 	margin-bottom: 10px;
 }
@@ -187,12 +212,6 @@ body {
 .footer-stats p {
 	font-size: 18px;
 	margin: 10px 0;
-}
-
-/* Контакты */
-.footer-contacts h3 {
-	color: rgba(248, 66, 10, 0.747);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .footer-contacts a {
