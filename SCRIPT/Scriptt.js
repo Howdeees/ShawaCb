@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+	updateCartTotal()
 	// Функция открытия попапа
 	function openPopup(title, price, info = '', image = '') {
 		document.getElementById('Title').innerText = title // Заполнение заголовка
@@ -40,12 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		localStorage.setItem('cart', JSON.stringify(cart))
 
 		// Подтверждение
-		alert(
+		showCustomAlert(
 			`Добавлено в корзину: ${title} с добавками ${
 				addonDetails.join(', ') || 'Нет'
 			} за ${totalPrice} ₽`
 		)
-
+		updateCartTotal()
 		closePopup()
 	}
 
@@ -54,9 +55,37 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('.popup').style.display = 'none'
 		document.querySelector('.overlay').style.display = 'none'
 	}
+	function calculateTotal() {
+		const cart = JSON.parse(localStorage.getItem('cart')) || []
+		let total = 0
 
+		cart.forEach(item => {
+			total += item.totalPrice
+		})
+
+		return total
+	}
+
+	// Функция для обновления счетчика общего счета
+	function updateCartTotal() {
+		const total = calculateTotal()
+		document.getElementById('cartTotal').innerHTML = `Итого: ${total} ₽`
+	}
+	function showCustomAlert(message) {
+		const alertBox = document.getElementById('customAlert')
+		const alertMessage = document.getElementById('customAlertMessage')
+
+		alertMessage.innerText = message
+		alertBox.style.display = 'flex'
+	}
+
+	function closeCustomAlert() {
+		const alertBox = document.getElementById('customAlert')
+		alertBox.style.display = 'none'
+	}
 	// Экспорт функций
 	window.addToCart = addToCart
 	window.openPopup = openPopup
 	window.closePopup = closePopup
+	window.closeCustomAlert = closeCustomAlert
 })

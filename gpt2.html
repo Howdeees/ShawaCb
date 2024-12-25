@@ -23,6 +23,7 @@
 					<a href="tel:+79501130303" class="phone">+7 (950) 113-03-03</a>
 					<div id="cartItems">
 						<button class="client-button" id="cartButton" onclick="location.href='/cart.html';">Корзина</button>
+						<div id="cartTotal" ></div>
 					</div>
 				</div>
 			</div>
@@ -235,6 +236,15 @@
 				  </article>
 		 </section>
 	</main>
+	
+<div id="customAlert" class="modal" style="display: none;">
+  <div class="modal-content">
+		<p id="customAlertMessage"></p>
+    <span class="close-button" onclick="closeCustomAlert()">Ok</span>
+  </div>
+</div>
+
+
 	<div class="overlay" onclick="closePopup()"></div>
     <div class="popup" id="popup">
         <span class="close" onclick="closePopup()">×</span>

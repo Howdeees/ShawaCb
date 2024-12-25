@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			total += item.totalPrice
 		})
 
-		cartTotalContainer.innerHTML = `<h3>Общая сумма: ${total} ₽</h3>`
+		cartTotalContainer.innerHTML = `<h3> ${total} ₽</h3>`
 	}
 
 	// Удаление элемента из корзины
