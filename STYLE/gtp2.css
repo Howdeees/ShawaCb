@@ -1,9 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,regular,500,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
 body {
 	margin: 0;
 	font-family: 'M PLUS Rounded 1c';
-	background-color: #222222fb;
+	background-color: #7e7e7ed2;
+	background-image: url('/images1/back.png');
 	color: #fff;
 }
 
@@ -11,22 +13,21 @@ body {
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
-	background-color: #333;
+	background-color: #464646;
 	color: white;
 	padding: 5px 0;
-	font-weight: 700;
+	font-weight: 701;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	margin-bottom: 2%;
+	margin-bottom: 10px;
 }
 main {
 	flex-grow: 1;
 }
 .head {
 	font-family: 'Algerian';
-	font-weight: 1000;
-	font-size: 50px;
-	color: rgba(248, 66, 10, 0.747);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	font-weight: 300;
+	font-size: 58px;
+	color: rgb(202, 202, 202);
 }
 
 .container {
@@ -47,7 +48,6 @@ main {
 	border: none;
 	color: rgb(255, 254, 254);
 	font-size: 20px;
-	cursor: pointer;
 	margin-right: 10px;
 }
 
@@ -81,7 +81,7 @@ main {
 }
 
 .client-button {
-	background-color: rgba(248, 66, 10, 0.747);
+	background-color: rgba(159, 161, 161, 0.747);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 	border: none;
 	padding: 8px 15px;
@@ -136,58 +136,27 @@ main {
 	flex-direction: column; /* Располагаем элементы вертикально */
 	width: 100%; /* Занимает всю ширину страницы */
 }
-aside {
-	top: 100px;
-	width: 18%;
-	background-color: lightgray;
+
+.menu-section h1 {
+	margin: 5px;
+	font-size: 68px;
+	font-weight: 500; /* Жирный текст */
 	text-align: center;
-	font-size: 25px;
-}
-.article-container {
-	align-self: self-start;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
-	border-radius: 70px;
-	width: 400px;
-	display: flex;
-	justify-content: center;
-	padding: 0px;
-	margin: 0 auto;
-}
-.article-title {
+	color: rgb(73, 73, 73);
 	font-family: 'Algerian';
-	font-size: 48px;
-	text-align: center;
-}
-.article-sectionR {
-	display: inline-block;
-	align-items: center;
-	width: 40%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	margin-left: 2%; /* Центровка по горизонтали */
-	padding: 2px;
-	border-radius: 15px;
 }
 
-.article-sectionL {
-	display: inline-block;
-	align-items: center;
-	width: 45%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	margin: 1%;
-	padding: 2px;
-	border-radius: 15px;
-}
 .article-section {
-	display: inline-block;
-	width: 47%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.6); /* Фон для box */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+	display: inline-table;
+	width: 46%; /* На всю ширину окна */
+	background-color: rgba(51, 51, 51, 0.212); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
 	margin: 10px;
 	padding: 10px;
-	border-radius: 15px;
+	border-top-left-radius: 250px 60px;
+	border-top-right-radius: 250px 60px;
+	border-bottom-left-radius: 100px 40px;
+	border-bottom-right-radius: 100px 40px;
 	margin-left: 20px;
 }
 .article-items {
@@ -197,9 +166,11 @@ aside {
 }
 
 .article-item {
-	border-radius: 10px; /* Скругление углов */
-	background-color: #333; /* Фон для контраста */
-	color: #fff; /* Цвет текста */
+	border-top-left-radius: 50px 60px;
+	border-top-right-radius: 50px 60px;
+	border-bottom-left-radius: 50px 60px;
+	border-bottom-right-radius: 50px 60px;
+	background-color: #3333335b; /* Фон для контраста */
 	padding: 0px; /* Внутренние отступы */
 	margin: 3px; /* Внешние отступы */
 	align-items: center;
@@ -219,45 +190,56 @@ aside {
 	font-size: 30px;
 	margin: 2px;
 }
-.article-item h3 {
-	font-weight: 400;
-	font-size: 30px;
-	font-family: 'M PLUS Rounded 1c';
-	text-align: center;
-	margin: 2px;
-}
 
 .article-item:hover {
 	transform: scale(1.05); /* Лёгкое увеличение при наведении */
-	box-shadow: 0 6px 12px rgba(248, 66, 10, 0.747);
+	/*box-shadow: 0 6px 12px  rgba(159, 161, 161, 0.747)*/
 	background-color: #444;
 }
 
 .menu-section {
 	display: inline-block; /* Flexbox для внутренних элементов */
 	align-items: center; /* Центрирование содержимого по горизонтали */
-	background-image: url('../images1/greyback.jpg'); /* Фон для секции */
-	background-size: cover; /* Растянуть фон по размеру секции */
-	background-position: center; /* Центрируем фон */
-	background-repeat: no-repeat; /* Отключаем повторение */
 	box-sizing: border-box; /* Учитываем отступы */
 	border-radius: 15px; /* Скругление углов (опционально) */
 	padding: 0; /* Внутренние отступы */
-	margin: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-	height: auto; /* Автоматическая высота */
+	margin: 0 0;
 	margin-top: 100px;
-	color: rgba(248, 66, 10, 0.747);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	height: auto; /* Автоматическая высота */
 }
-
 .menu-section h2 {
 	margin: 0 0 7px;
-	font-size: 38px; /* Размер текста */
-	font-weight: 350; /* Жирный текст */
+	font-size: 42px;
+	font-weight: 400;
 	text-align: center;
+	color: rgb(233, 233, 233);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	font-family: 'Algerian';
 }
-
+.menu-section h3 {
+	margin: 0 0 7px;
+	font-size: 28px;
+	font-weight: 300;
+	text-align: center;
+	color: rgb(202, 202, 202);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	font-family: 'Ubuntu';
+}
+.mapcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 20px;
+}
+.map {
+	flex: 1;
+}
+.maptext {
+	flex: 1;
+	font-size: 28px;
+	font-family: 'Ubuntu';
+	font-weight: 300;
+}
 /* Скрываем попап по умолчанию */
 .popup-cart {
 	position: fixed;
@@ -341,7 +323,7 @@ aside {
 }
 /* Общий стиль футера */
 .footer {
-	background-color: #333;
+	background-color: #464646a6;
 	color: #fff;
 	padding: 40px 20px 20px;
 	font-family: 'M PLUS Rounded 1c';
@@ -363,7 +345,7 @@ aside {
 }
 
 .footer-column h3 {
-	color: rgba(248, 66, 10, 0.747);
+	color: rgb(148, 146, 146);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 	margin-bottom: 10px;
 }
@@ -393,7 +375,7 @@ aside {
 
 /* Контакты */
 .footer-contacts h3 {
-	color: rgba(248, 66, 10, 0.747);
+	color: rgb(202, 202, 202);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
