@@ -1,0 +1,465 @@
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,regular,500,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+body {
+	margin: 0;
+	font-family: 'M PLUS Rounded 1c';
+	background-color: #7e7e7ed2;
+	background-image: url('/images1/back.png');
+	color: #fff;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	background-color: #464646;
+	color: white;
+	padding: 5px 0;
+	font-weight: 701;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	margin-bottom: 10px;
+}
+main {
+	flex-grow: 1;
+}
+.head {
+	font-family: 'Algerian';
+	font-weight: 300;
+	font-size: 58px;
+	color: rgb(202, 202, 202);
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+}
+
+.menu-button {
+	background: none;
+	border: none;
+	color: rgb(255, 254, 254);
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.menu-link {
+	color: white;
+	text-decoration: none;
+	margin-right: 15px;
+	font-size: 14px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	height: 40px;
+	margin-right: 10px;
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+}
+
+.phone {
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	margin-right: 20px;
+}
+
+.client-button {
+	background-color: rgba(159, 161, 161, 0.747);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	border: none;
+	padding: 8px 15px;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 14px;
+	font-family: 'M PLUS Rounded 1c';
+}
+
+.client-button:hover {
+	background-color: #e68a00;
+}
+
+/* Модальное окно */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+	background-color: #333;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.modal-button,
+.modal-close {
+	background-color: #f90;
+	border: none;
+	padding: 10px 20px;
+	margin-top: 10px;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.modal-button:hover,
+.modal-close:hover {
+	background-color: #e68a00;
+}
+.layout {
+	display: flex; /* Включаем Flexbox */
+	flex-direction: column; /* Располагаем элементы вертикально */
+	width: 100%; /* Занимает всю ширину страницы */
+}
+
+.menu-section h1 {
+	margin: 5px;
+	font-size: 68px;
+	font-weight: 500; /* Жирный текст */
+	text-align: center;
+	color: rgb(73, 73, 73);
+	font-family: 'Algerian';
+}
+
+.article-section {
+	display: inline-table;
+	width: 46%; /* На всю ширину окна */
+	background-color: rgba(51, 51, 51, 0.212); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
+	margin: 10px;
+	padding: 10px;
+	border-top-left-radius: 250px 60px;
+	border-top-right-radius: 250px 60px;
+	border-bottom-left-radius: 100px 40px;
+	border-bottom-right-radius: 100px 40px;
+	margin-left: 20px;
+}
+.article-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Два столбца */
+	gap: 10px; /* Расстояние между строками и колонками */
+}
+
+.article-item {
+	border-top-left-radius: 50px 60px;
+	border-top-right-radius: 50px 60px;
+	border-bottom-left-radius: 50px 60px;
+	border-bottom-right-radius: 50px 60px;
+	background-color: #3333335b; /* Фон для контраста */
+	padding: 0px; /* Внутренние отступы */
+	margin: 3px; /* Внешние отступы */
+	align-items: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+	cursor: pointer; /* Указатель мыши при наведении */
+	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении*/
+}
+.article-item img {
+	width: 90%;
+	border-radius: 15px;
+	margin-left: 5%;
+	padding: px;
+}
+
+.article-item p {
+	text-align: center;
+	font-size: 30px;
+	margin: 2px;
+}
+
+.article-item:hover {
+	transform: scale(1.05); /* Лёгкое увеличение при наведении */
+	/*box-shadow: 0 6px 12px  rgba(159, 161, 161, 0.747)*/
+	background-color: #444;
+}
+
+.menu-section {
+	display: inline-block; /* Flexbox для внутренних элементов */
+	align-items: center; /* Центрирование содержимого по горизонтали */
+	box-sizing: border-box; /* Учитываем отступы */
+	border-radius: 15px; /* Скругление углов (опционально) */
+	padding: 0; /* Внутренние отступы */
+	margin: 0 0;
+	margin-top: 100px;
+	height: auto; /* Автоматическая высота */
+}
+.menu-section h2 {
+	margin: 0 0 7px;
+	font-size: 42px;
+	font-weight: 400;
+	text-align: center;
+	color: rgb(233, 233, 233);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	font-family: 'Algerian';
+}
+.menu-section h3 {
+	margin: 0 0 7px;
+	font-size: 28px;
+	font-weight: 300;
+	text-align: center;
+	color: rgb(202, 202, 202);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	font-family: 'Ubuntu';
+}
+.mapcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 20px;
+}
+.map {
+	flex: 1;
+}
+.maptext {
+	flex: 1;
+	font-size: 28px;
+	font-family: 'Ubuntu';
+	font-weight: 300;
+}
+/* Скрываем попап по умолчанию */
+.popup-cart {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+	display: none; /* Скрываем попап */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+/* Контент внутри попапа */
+.popup-content {
+	background-color: #fff;
+	width: 80%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+/* Кнопка закрытия */
+.close-button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #f90;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.close-button:hover {
+	background-color: #e08900;
+}
+
+/* Скрываем попап по умолчанию */
+.menu-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+	display: none; /* Попап изначально скрыт */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+/* Содержимое попапа */
+.menu-popup .popup-content {
+	background-color: #fff;
+	width: 80%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+/* Кнопка закрытия */
+.menu-popup .close-button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #f90;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.menu-popup .close-button:hover {
+	background-color: #e08900;
+}
+/* Общий стиль футера */
+.footer {
+	background-color: #464646a6;
+	color: #fff;
+	padding: 40px 20px 20px;
+	font-family: 'M PLUS Rounded 1c';
+	font-weight: 300;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Разделы меню */
+.footer-columns {
+	display: flex;
+	gap: 20px;
+}
+
+.footer-column h3 {
+	color: rgb(148, 146, 146);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	margin-bottom: 10px;
+}
+
+.footer-column a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+	text-decoration: underline;
+}
+
+/* Статистика */
+.footer-stats {
+	flex: 1;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.footer-stats p {
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+/* Контакты */
+.footer-contacts h3 {
+	color: rgb(202, 202, 202);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.footer-contacts a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer-contacts a:hover {
+	text-decoration: underline;
+}
+
+.footer-socials {
+	margin-top: 10px;
+}
+
+.footer-socials a {
+	margin-right: 10px;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+	text-align: center;
+	margin-top: 20px;
+	border-top: 1px solid #444;
+	padding-top: 10px;
+	font-size: 14px;
+	color: #bbb;
+}
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 420px;
+	background-color: #333;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	padding: 20px;
+	z-index: 1000;
+}
+.popup .posn {
+	display: inline-block;
+	font-size: 30px;
+	margin: 2px;
+}
+.plabels {
+	margin: 10px;
+	font-size: 20px;
+}
+
+.popup .psost {
+	color: #888;
+	font-size: 16px;
+	padding-left: 0px;
+	margin: 0;
+}
+
+.popup img {
+	width: 98%;
+	border-radius: 10px;
+}
+
+.popup .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	color: #888;
+	font-size: 18px;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
