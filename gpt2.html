@@ -6,8 +6,7 @@
 		<title>Shawa Club</title>
 		<link rel="stylesheet" href="STYLE/gtp2.css" />
 	</head>
-	<body>
-		<header class="header">
+			<header class="header">
 			<div class="container">
 				<div class="menu">
 					<p class="menu-button">☰</p>
@@ -27,12 +26,14 @@
 				</div>
 			</div>
 		</header>
+	<body>
 		<main>
 		<section class="menu-section">
+			<article class="menu-title">
+				<h1>Menu</h1>
+			</article>
 			<!-- Шаурма -->
-					<h1>Menu</h1>
-			<article class="article-section">	
-			
+			<article class="article-section">
 					<h2>Shawa</h2>
 					<div class="article-items">
 							<div class="article-item" onclick="openPopup('Студенческая', 140,'Состав: курица, салат, огурец, соус \n Вес: 150гр. ', '../images1/stud.jpg')">
@@ -204,6 +205,7 @@
 							<p>70 ₽</p>
 						</div>
 			</article>
+		</section>
 			<section id="location-info" class="menu-section">
 				<h1>Menu</h1>
 				<article>
@@ -231,56 +233,23 @@
 							</div>
 						</div>
 				  </article>
-	     </section>
-=
-		<article>
-		<!-- Модальное окно настройки шаурмы -->
-		<div id="customization-modal" class="modal">
-			<div class="modal-content">
-				<h2 id="customization-title"></h2>
-				<p>Выберите дополнительные ингредиенты:</p>
-				<div class="customization-options">
-					<label
-						><input type="checkbox" value="Сыр (+20 ₽)" /> Сыр (+20 ₽)</label
-					>
-					<label
-						><input type="checkbox" value="Острый соус (+15 ₽)" /> Острый соус
-						(+15 ₽)</label
-					>
-					<label
-						><input type="checkbox" value="Бекон (+30 ₽)" /> Бекон (+30
-						₽)</label
-					>
-				</div>
-				<button class="modal-button" onclick="addCustomizedToCart()">
-					Добавить в корзину
-				</button>
-				<button class="modal-close" onclick="closeModal()">Закрыть</button>
-			</div>
-		</div>
-		</article>
-		</section>
-	  <!-- Попап корзины -->
-    <div class="popup-cart" id="popupCart">
-	    <div class="popup-content">
-			  <h2>Корзина</h2>
-			  <div class="cart-items" id="cartItems">
-				<!-- Здесь будут отображаться выбранные товары -->
-			  </div>
-			<button class="close-button" id="closePopup">Закрыть</button>
-	    </div>
-    </div>
-
-    <!-- Попап для меню -->
-    <div class="menu-popup" id="menuPopup" style="display: none;">
-	    <div class="popup-content">
-			  <h2 id="popupTitle">Детали элемента меню</h2>
-			  <p id="popupDescription">Описание элемента появится здесь.</p>
-			<button class="add-to-cart-button" id="addToCartButton">Добавить в корзину</button>
-			<button class="close-button" id="closeMenuPopup">Закрыть</button>
-	    </div>
-    </div>
+		 </section>
 	</main>
+	<div class="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <span class="close" onclick="closePopup()">×</span>
+        <img id="popupImage" src="" alt="Шаурма">
+				<p class='posn' id="Title"></p>
+        <p class='posn' id="popupPrice"></p>
+				<p class='psost' id="pInfo"></p>
+        <p class='posn'>Выберите добавки:</p>
+        <form class='plabels' id="addonsForm">
+            <label><input type="checkbox" name="addon" value="Сыр" /> Сыр (20 ₽)</label><br>
+            <label><input type="checkbox" name="addon" value="Бекон" /> Бекон (30 ₽)</label><br>
+            <label><input type="checkbox" name="addon" value="Фри" /> Фри (25 ₽)</label><br>
+        </form>
+        <button class="client-button" onclick="addToCart()">Добавить</button>
+    </div>
 	<footer class="footer">
   <div class="footer-container">
     <!-- Разделы меню -->
@@ -326,32 +295,6 @@
     <p>© 2024 ShawaClub. Все права защищены.</p>
   </div>
 </footer>
-
-<div class="overlay" onclick="closePopup()"></div>
-    <div class="popup" id="popup">
-        <span class="close" onclick="closePopup()">×</span>
-        <img id="popupImage" src="" alt="Шаурма">
-				<p class='posn' id="Title"></p>
-        <p class='posn' id="popupPrice"></p>
-				<p class='psost' id="pInfo"></p>
-        <p class='posn'>Выберите добавки:</p>
-        <form class='plabels' id="addonsForm">
-            <label><input type="checkbox" name="addon" value="Сыр" /> Сыр (20 ₽)</label><br>
-            <label><input type="checkbox" name="addon" value="Бекон" /> Бекон (30 ₽)</label><br>
-            <label><input type="checkbox" name="addon" value="Фри" /> Фри (25 ₽)</label><br>
-        </form>
-        <button class="client-button" onclick="addToCart()">Добавить</button>
-    </div>
-	<div class="overlay" onclick="closePopup()"></div>
-    <div class="popup" id="popup">
-        <span class="close" onclick="closePopup()">×</span>
-        <img id="popupImage" src="" alt="Шаурма">
-				<p class='posn' id="Title"></p>
-        <p class='posn' id="popupPrice"></p>
-				<p class='psost' id="pInfo"></p>
-        <button class="client-button" onclick="addToCart()">Добавить</button>
-    </div>
-	</div>
 
 </body>
 <script src="SCRIPT/Scriptt.js"></script>

@@ -15,14 +15,12 @@ body {
 	z-index: 1000;
 	background-color: #464646;
 	color: white;
-	padding: 5px 0;
+	padding: 0px 0;
 	font-weight: 701;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	margin-bottom: 10px;
+	margin: 0px;
 }
-main {
-	flex-grow: 1;
-}
+
 .head {
 	font-family: 'Algerian';
 	font-weight: 300;
@@ -137,8 +135,9 @@ main {
 	width: 100%; /* Занимает всю ширину страницы */
 }
 
-.menu-section h1 {
-	margin: 5px;
+h1 {
+	margin: 0px;
+	margin-top: 60px;
 	font-size: 68px;
 	font-weight: 500; /* Жирный текст */
 	text-align: center;
@@ -146,19 +145,6 @@ main {
 	font-family: 'Algerian';
 }
 
-.article-section {
-	display: inline-table;
-	width: 46%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.212); /* Фон для box */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
-	margin: 10px;
-	padding: 10px;
-	border-top-left-radius: 250px 60px;
-	border-top-right-radius: 250px 60px;
-	border-bottom-left-radius: 100px 40px;
-	border-bottom-right-radius: 100px 40px;
-	margin-left: 20px;
-}
 .article-items {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* Два столбца */
@@ -196,16 +182,28 @@ main {
 	/*box-shadow: 0 6px 12px  rgba(159, 161, 161, 0.747)*/
 	background-color: #444;
 }
-
+.article-section {
+	width: 94%; /* На всю ширину окна */
+	background-color: rgba(51, 51, 51, 0.212); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
+	margin: 3%;
+	border-top-left-radius: 250px 60px;
+	border-top-right-radius: 250px 60px;
+	border-bottom-left-radius: 100px 40px;
+	border-bottom-right-radius: 100px 40px;
+}
 .menu-section {
-	display: inline-block; /* Flexbox для внутренних элементов */
-	align-items: center; /* Центрирование содержимого по горизонтали */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	box-sizing: border-box; /* Учитываем отступы */
 	border-radius: 15px; /* Скругление углов (опционально) */
 	padding: 0; /* Внутренние отступы */
 	margin: 0 0;
-	margin-top: 100px;
 	height: auto; /* Автоматическая высота */
+}
+.menu-title {
+	grid-column: span 2;
+	margin-top: 2%;
 }
 .menu-section h2 {
 	margin: 0 0 7px;
