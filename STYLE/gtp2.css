@@ -137,7 +137,7 @@ body {
 
 h1 {
 	margin: 0px;
-	margin-top: 60px;
+	margin-top: 75px;
 	font-size: 68px;
 	font-weight: 500; /* Жирный текст */
 	text-align: center;
@@ -201,13 +201,14 @@ h1 {
 	margin: 0 0;
 	height: auto; /* Автоматическая высота */
 }
+
 .menu-title {
 	grid-column: span 2;
 	margin-top: 2%;
 }
 .menu-section h2 {
 	margin: 0 0 7px;
-	font-size: 42px;
+	font-size: 48px;
 	font-weight: 400;
 	text-align: center;
 	color: rgb(233, 233, 233);
@@ -216,27 +217,33 @@ h1 {
 }
 .menu-section h3 {
 	margin: 0 0 7px;
-	font-size: 28px;
+	font-size: 26px;
 	font-weight: 300;
 	text-align: center;
 	color: rgb(202, 202, 202);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 	font-family: 'Ubuntu';
 }
-.mapcontainer {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	gap: 20px;
-}
+
 .map {
-	flex: 1;
+	margin: 2%;
 }
 .maptext {
-	flex: 1;
+	margin: 2%;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	font-weight: 300;
+}
+.maptext p {
+	color: rgb(255, 255, 255);
 	font-size: 28px;
 	font-family: 'Ubuntu';
+	font-weight: 200;
+}
+.maptext h2 {
 	font-weight: 300;
+	color: rgb(202, 202, 202);
+	font-size: 38px;
+	font-family: 'Ubuntu';
 }
 /* Скрываем попап по умолчанию */
 .popup-cart {
@@ -342,8 +349,8 @@ h1 {
 	gap: 20px;
 }
 
-.footer-column h3 {
-	color: rgb(148, 146, 146);
+.footer h3 {
+	color: rgb(202, 202, 202);
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 	margin-bottom: 10px;
 }
@@ -369,12 +376,6 @@ h1 {
 .footer-stats p {
 	font-size: 18px;
 	margin: 10px 0;
-}
-
-/* Контакты */
-.footer-contacts h3 {
-	color: rgb(202, 202, 202);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .footer-contacts a {
