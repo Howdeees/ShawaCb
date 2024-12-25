@@ -34,16 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		closePopup()
 	}
-	function openPopup(title, price, info, imageSrc) {
-		document.getElementById('popupTitle').innerText = title
-		document.getElementById('Title').innerText = title
-		document.getElementById('pInfo').innerText = info
-		document.getElementById('popupPrice').innerText = `${price} ₽`
-		document.getElementById('popupImage').src = imageSrc
-
-		document.querySelector('.popup').style.display = 'block'
-		document.querySelector('.overlay').style.display = 'block'
-	}
 
 	// Закрытие попапа
 	function closePopup() {

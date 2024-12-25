@@ -6,7 +6,7 @@ body {
 	font-family: 'M PLUS Rounded 1c';
 	background-color: #7e7e7ed2;
 	background-image: url('/images1/back.jpg');
-	background-size: cover; /* Изображение заполняет весь фон */
+	background-size: cover;
 	color: #fff;
 }
 
@@ -142,7 +142,8 @@ h1 {
 	font-size: 68px;
 	font-weight: 500; /* Жирный текст */
 	text-align: center;
-	color: rgb(73, 73, 73);
+	color: rgb(206, 206, 206);
+	text-shadow: rgb(92, 92, 92) 2px 1px 1px;
 	font-family: 'Algerian';
 }
 
@@ -185,7 +186,7 @@ h1 {
 }
 .article-section {
 	width: 94%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.212); /* Фон для box */
+	background-color: rgba(51, 51, 51, 0.274); /* Фон для box */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
 	margin: 3%;
 	border-top-left-radius: 250px 60px;
@@ -211,6 +212,8 @@ h1 {
 .map-title {
 	grid-column: span 2;
 	margin: 2%;
+	color: rgb(224, 224, 224);
+	text-shadow: rgb(92, 92, 92) 2px 1px 1px;
 }
 .menu-section h2 {
 	margin: 0 0 7px;
@@ -235,7 +238,7 @@ h1 {
 	margin: 2%;
 }
 .maptext {
-	background-color: rgba(51, 51, 51, 0.212); /* Фон для box */
+	background-color: rgba(99, 99, 99, 0.5);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
 	border-top-left-radius: 250px 60px;
 	border-top-right-radius: 250px 60px;
@@ -245,7 +248,8 @@ h1 {
 }
 .maptext p {
 	margin: 2%;
-	color: #fff;
+	color: rgb(224, 224, 224);
+	text-shadow: rgb(92, 92, 92) 2px 1px 1px;
 	font-size: 28px;
 	font-family: 'Ubuntu';
 	font-weight: 100;
@@ -255,7 +259,7 @@ h1 {
 .maptext h2 {
 	margin: 2%;
 	font-weight: 300;
-	color: rgb(202, 202, 202);
+	color: rgb(224, 224, 224);
 	font-size: 38px;
 	font-family: 'Ubuntu';
 }
