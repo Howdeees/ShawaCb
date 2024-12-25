@@ -10,10 +10,10 @@
 		<header class="header">
 			<div class="container">
 				<div class="menu">
-					<button class="menu-button">☰</button>
-					<a href="#" class="menu-link">Каталог</a>
-					<a href="#" class="menu-link">Как нас найти</a>
-					<a href="#" class="menu-link">Отзывы</a>
+					<p class="menu-button">☰</p>
+					<a href="/gpt2.html" class="menu-link">Меню</a>
+					<a href="/gpt2.html" class="menu-link">Как нас найти</a> <!-- Под менб сделать раздел с местонахождением -->
+					<a href="/gpt2.html" class="menu-link">О нас</a> <!-- Ссылка на отдельную страницу с фотокарточками  с информацией о заведении  -->
 				</div>
 				<div class="logo">
 					<img src="../images1/Logo.png" alt="Logo" />
@@ -29,15 +29,11 @@
 		</header>
 		<main>
 		<section class="menu-section">
-			<article class="article-container">
-				<div class="article-title">
-			<h1>Menu</h1>
-			</div>
-			</article>
 			<!-- Шаурма -->
+					<h1>Menu</h1>
 			<article class="article-section">	
 			
-					<h2>Шаурма</h2>
+					<h2>Shawa</h2>
 					<div class="article-items">
 							<div class="article-item" onclick="openPopup('Студенческая', 140,'Состав: курица, салат, огурец, соус \n Вес: 150гр. ', '../images1/stud.jpg')">
 								<h3>Студенческая</h3>
@@ -99,7 +95,7 @@
 		<article class="article-section">
 			<!-- Бургеры -->
 			
-					<h2>Бургеры</h2>
+					<h2>Burgers</h2>
 					<div class="article-items">
 							<div class="article-item" onclick="openPopup('Бургер', 240, 'Состав: котлета(говяд.) салат, огурец, соус \n Вес: 240гр.','../images1/burg.jpg')">
 									<h3>Бургер </h3>
@@ -137,7 +133,7 @@
 		<article class="article-section">
 			<!-- Закуски -->
 			
-					<h2>Закуски</h2>
+					<h2>Snack</h2>
 					<div class="article-items">
 							<div class="article-item" onclick="openPopup('Хрустящий картофель фри', 120,'Золотистая хрустящяя корочка, мягкая внутри  ','../images1/fries.jpg')">
 									<h3>Хрустящий фри</h3>
@@ -175,7 +171,7 @@
 		</article>
 		<article class="article-section">
 			<!-- Допы -->
-        <h2>Дополнительно</h2>
+        <h2>Dop's</h2>
         <div class="article-items">
             <div class="article-item">
 							<h3>Перец халапеньо</h3>
@@ -198,7 +194,7 @@
 							<p>40 ₽</p>
 						</div>
 						<div class="article-item">
-							<h3>Дополнительное мясо</h3>
+							<h3>Доп. мясо</h3>
 							<img src="../images1/meat.jpg"/>
 							<p>70 ₽</p>
 						</div>
@@ -208,6 +204,35 @@
 							<p>70 ₽</p>
 						</div>
 			</article>
+			<section id="location-info" class="menu-section">
+				<h1>Menu</h1>
+				<article>
+						<div class="mapcontainer">
+							<!-- Map Section -->
+							<div class="map">
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509616!2d144.95373531592595!3d-37.8172099797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577b3bba62bdc0!2sEureka%20Skydeck!5e0!3m2!1sen!2sau!4v1612398472997!5m2!1sen!2sau" 
+									width=800px 
+									height=400px 
+									style="border:0; border-radius: 8px;" 
+									allowfullscreen="" 
+									loading="lazy">
+								</iframe>
+							</div>
+
+							<!-- Text Section -->
+							<div class="maptext">
+								<h2>Наше местоположение</h2>
+								<p>
+									Адрес: ул. Примерная, д. 123, Москва<br>
+									Время работы: Пн-Вс: 10:00 - 22:00<br>
+									Радиус доставки: до 10 км от заведения<br>
+								</p>
+							</div>
+						</div>
+				  </article>
+	     </section>
+=
 		<article>
 		<!-- Модальное окно настройки шаурмы -->
 		<div id="customization-modal" class="modal">
