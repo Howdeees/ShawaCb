@@ -67,10 +67,48 @@
 								<button id="onlineButton">Онлайн-оплата</button>
 							</div>
 							<div id="paymentDetails" class="payment-details">
-								<!-- Начальное состояние для наличных -->
-								<p>
-									Оплата производится при получении. Подготовьте точную сумму.
-								</p>
+								<p>Оплата картой:</p>
+								<div class="card-payment">
+									<label for="cardType">Тип карты:</label>
+									<select id="cardType" class="styled-select">
+										<option value="visa">Visa</option>
+										<option value="mastercard">MasterCard</option>
+										<option value="mir">МИР</option>
+									</select>
+
+									<div class="input-group">
+										<label for="cardNumber">Номер карты:</label>
+										<input
+											type="text"
+											id="cardNumber"
+											placeholder="0000 0000 0000 0000"
+											maxlength="19"
+										/>
+									</div>
+
+									<div class="input-row">
+										<div class="input-group">
+											<label for="expiryDate">Срок действия:</label>
+											<input
+												type="text"
+												id="expiryDate"
+												placeholder="MM/YY"
+												maxlength="5"
+											/>
+										</div>
+										<div class="input-group">
+											<label for="cvv">CVV:</label>
+											<input
+												type="password"
+												id="cvv"
+												placeholder="***"
+												maxlength="3"
+											/>
+										</div>
+									</div>
+
+									<button class="pay-button">Оплатить</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -86,16 +124,9 @@
 								</div>
 								<button class="remove-item">Удалить</button>
 							</div>
-							<div class="cart-item">
-								<div class="item-info">
-									<p class="item-name">Напиток "Кола"</p>
-									<p class="item-price">Цена: 150₽</p>
-								</div>
-								<button class="remove-item">Удалить</button>
-							</div>
 						</div>
-						<h2 class="cart-total">Общая сумма:</h2>
-						<div id="cartTotal2" class="cart-total">Общая сумма:</div>
+						<h3 class="cart-total">Общая сумма:</h3>
+						<div id="cartTotal2" class="cart-total"></div>
 						<button class="checkout-button">Оформить заказ</button>
 					</div>
 				</div>

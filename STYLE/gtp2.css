@@ -125,7 +125,7 @@ h1 {
 	align-items: center;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
 	cursor: pointer; /* Указатель мыши при наведении */
-	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении*/z
+	transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении*/
 }
 .article-item img {
 	width: 90%;
@@ -147,7 +147,7 @@ h1 {
 }
 .article-section {
 	width: 94%; /* На всю ширину окна */
-	background-color: rgba(51, 51, 51, 0.274); /* Фон для box */
+	background-color: rgba(51, 51, 51, 0.349); /* Фон для box */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
 	margin: 3%;
 	border-top-left-radius: 250px 60px;
@@ -308,7 +308,7 @@ h1 {
 }
 /* Общий стиль футера */
 .footer {
-	background-color: #464646a6;
+	background-color: #464646c9;
 	color: #fff;
 	padding: 40px 20px 20px;
 	font-family: 'M PLUS Rounded 1c';

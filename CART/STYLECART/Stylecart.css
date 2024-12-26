@@ -139,26 +139,31 @@ h2 {
 }
 .cart-items {
 	flex: 2;
-	background-color: #333;
+	background-color: rgba(51, 51, 51, 0.459); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
 	border-radius: 15px;
 	padding: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 	max-width: 60%;
 }
 
 .cart-items h3 {
-	font-size: 22px;
+	background-color: #3333335b;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.295);
+	padding: 15px;
+	border-radius: 10px;
+	font-size: 24px;
+	margin: 0%;
 	margin-bottom: 20px;
 	color: white;
 }
 .cart-item {
 	display: flex;
 	justify-content: space-between;
-	background-color: #444;
+	background-color: #3333335b;
 	border: 1px solid #f1f1f1;
-	padding: 0px;
-	margin: px;
-	width: 40%;
+	padding: 1%;
+	margin: 3%;
+	width: 90%;
 	border-radius: 15px;
 	align-items: center;
 }
@@ -167,8 +172,6 @@ h2 {
 	margin: 0;
 }
 .cart-item .item-info {
-	display: flex;
-	flex-direction: column;
 }
 
 .cart-item .item-name {
@@ -181,7 +184,17 @@ h2 {
 	font-size: 16px;
 	color: #ccc;
 }
-
+.remove-button {
+	padding: 15px;
+	background-color: #f0303080;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 2%;
+}
 .remove-item {
 	background-color: #e60000;
 	border: none;
@@ -198,23 +211,22 @@ h2 {
 
 .cart-total {
 	display: inline-block;
-	margin-top: 20px;
-	font-size: 20px;
-	font-weight: bold;
-	text-align: right;
-	color: white;
+	margin: 3%;
 }
 .checkout-button {
-	margin-top: 20px;
-	width: 100%;
-	padding: 10px;
+	position: absolute;
+	display: inline;
+	padding: 25px;
 	background-color: #e68a00;
 	color: white;
 	border: none;
-	border-radius: 5px;
+	border-radius: 50px;
 	cursor: pointer;
 	font-size: 18px;
 	font-weight: bold;
+	margin: 24px;
+	margin-right: 55px;
+	right: 0;
 }
 
 .checkout-button:hover {
@@ -236,17 +248,11 @@ h2 {
 /* Блок с выбором получения заказа */
 .order-options {
 	flex: 1;
-	background-color: #464646;
+	background-color: rgba(51, 51, 51, 0.459); /* Фон для box */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Тень */
 	border-radius: 15px;
 	padding: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 	max-width: 40%;
-}
-
-.order-options h3 {
-	font-size: 22px;
-	margin-bottom: 20px;
-	color: #fff;
 }
 
 .toggle-buttons {
@@ -278,6 +284,7 @@ h2 {
 	font-size: 16px;
 	margin-bottom: 20px;
 }
+
 .payment-details {
 	margin-top: 10px;
 	background-color: #444;
@@ -309,10 +316,86 @@ h2 {
 	background-color: #eaeaea;
 	border: 1px solid #ccc;
 }
+.card-payment {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	background-color: #333;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	color: #fff;
+}
+
+.card-payment label {
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.styled-select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #222;
+	color: #fff;
+}
+
+.styled-select option {
+	background-color: #222;
+	color: #fff;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.input-group input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #444;
+	color: #fff;
+	font-size: 14px;
+}
+
+.input-group input::placeholder {
+	color: #999;
+}
+
+.input-group input:focus {
+	border-color: #f90;
+	outline: none;
+}
+
+.pay-button {
+	padding: 12px 20px;
+	background-color: #f90;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+	background-color: #e67e00;
+}
 
 /* Общий стиль футера */
 .footer {
-	background-color: #464646a6;
+	background-color: #464646c9;
 	color: #fff;
 	padding: 40px 20px 20px;
 	font-family: 'M PLUS Rounded 1c';
